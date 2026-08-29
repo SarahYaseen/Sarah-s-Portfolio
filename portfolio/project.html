@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Details | Sarah Yaseen</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="View detailed overview, features, technologies used, and outcomes for this creative project by Sarah Yaseen.">
+  <meta name="author" content="Sarah Yaseen">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="../css/style.css">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="../assets/profile-placeholder.svg">
+  
+  <style>
+    .project-detail-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 3rem;
+      margin-top: 2rem;
+      text-align: left;
+    }
+    @media (min-width: 992px) {
+      .project-detail-grid {
+        grid-template-columns: 2fr 1fr;
+      }
+    }
+    .project-sidebar-card {
+      background-color: var(--bg-tertiary);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 2rem;
+      position: sticky;
+      top: 100px;
+    }
+    .project-meta-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+      margin-bottom: 2rem;
+    }
+    .project-meta-item {
+      display: flex;
+      flex-direction: column;
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 0.75rem;
+    }
+    .project-meta-item:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+    .project-meta-label {
+      font-size: 11px;
+      color: var(--gold-primary);
+      text-transform: uppercase;
+      font-weight: bold;
+      letter-spacing: 1px;
+      margin-bottom: 0.25rem;
+    }
+    .project-meta-val {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+    .project-body-content {
+      font-size: 16px;
+      line-height: 1.8;
+      color: var(--text-muted);
+    }
+    .project-body-content p {
+      margin-bottom: 1.5rem;
+    }
+    .project-body-content h2, .project-body-content h3 {
+      color: var(--text-primary);
+      margin-bottom: 1rem;
+      font-family: var(--font-heading);
+    }
+    .project-body-content ul {
+      margin-bottom: 1.5rem;
+      padding-left: 1.5rem;
+      list-style-type: disc;
+    }
+    .project-body-content li {
+      margin-bottom: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar (Single-Row Absolute Layout matching Reference) -->
+  <header id="dynamic-header">
+    <div class="header-bottom">
+      <div class="container">
+        <div class="logo">
+          <a href="../index.html">Sarah<span>.Yaseen</span></a>
+        </div>
+        
+        <button class="hamburger" id="hamburger-menu" aria-label="Toggle Navigation">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+        
+        <nav class="nav-menu" id="nav-menu-list">
+          <ul>
+            <li><a href="../index.html" class="nav-link">Home</a></li>
+            <li class="dropdown active">
+              <a href="#" class="nav-link dropdown-toggle-btn active">Portfolio</a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-item"><a href="wordpress.html">WordPress</a></li>
+                <li class="dropdown-item"><a href="ui-ux.html">UI/UX Design</a></li>
+                <li class="dropdown-item"><a href="graphic-design.html">Graphic Designing</a></li>
+                <li class="dropdown-item"><a href="etsy.html">Etsy Products</a></li>
+              </ul>
+            </li>
+            <li><a href="../about.html" class="nav-link">About</a></li>
+            <li><a href="../contact.html" class="nav-link">Contact</a></li>
+          </ul>
+        </nav>
+        
+        <div class="header-action-btn">
+          <a href="../contact.html" class="btn-nav-cta">Let's Connect</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Dynamic Project Detail Loader Container -->
+  <section class="section-padding" style="background-color: var(--bg-primary); min-height: 80vh;">
+    <div class="container" id="project-detail-container">
+      <!-- Loading State -->
+      <div class="text-center py-20">
+        <i class="fa-solid fa-circle-notch fa-spin text-4xl text-gold-primary mb-4" style="color: var(--gold-primary);"></i>
+        <p style="color: var(--text-muted); font-size: 0.8rem; text-transform: uppercase; tracking-widest: 2px;">Loading Project Details...</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-logo">Sarah<span>.Yaseen</span></div>
+          <p class="footer-desc">Creating modern, responsive WordPress websites, interface flows in Figma, and editable branding products in Canva.</p>
+        </div>
+        <div>
+          <h4 class="footer-title">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../about.html">About Me</a></li>
+            <li><a href="wordpress.html">WordPress Development</a></li>
+            <li><a href="ui-ux.html">UI/UX Design</a></li>
+            <li><a href="graphic-design.html">Graphic Designing</a></li>
+            <li><a href="etsy.html">Etsy Products</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">Contact</h4>
+          <div class="footer-contact">
+            <div class="footer-contact-item">
+              <i class="fa-solid fa-phone"></i>
+              <span>0335 7423475</span>
+            </div>
+            <div class="footer-contact-item">
+              <i class="fa-solid fa-envelope"></i>
+              <span>sarahyaseen2056@gmail.com</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2026 Sarah Yaseen. All Rights Reserved. <a href="/admin" style="color: inherit; opacity: 0.3; margin-left: 8px;" title="Admin Dashboard"><i class="fa-solid fa-lock" style="font-size: 9px;"></i></a></p>
+        <p>Built with <i class="fa-solid fa-heart" style="color: var(--gold-primary);"></i> by Antigravity</p>
+      </div>
+      
+      <!-- Huge footer watermark outline watermark text -->
+      <div class="footer-watermark">
+        Sarah Yaseen
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="../js/api.js"></script>
+  <script src="../js/script.js"></script>
+</body>
+</html>

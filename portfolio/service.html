@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Service Details | Sarah Yaseen</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Learn more about our core services: WordPress Development, Figma UI/UX prototyping, graphic design, and editable templates.">
+  <meta name="author" content="Sarah Yaseen">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="../css/style.css">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="../assets/profile-placeholder.svg">
+  
+  <style>
+    .service-details-container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding-top: 2rem;
+      text-align: left;
+    }
+    .service-title-section {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 2rem;
+      margin-bottom: 3rem;
+    }
+    .service-icon-large {
+      font-size: 3.5rem;
+      color: var(--gold-primary);
+    }
+    .service-block {
+      margin-bottom: 3rem;
+    }
+    .service-block h3 {
+      font-size: 20px;
+      color: var(--gold-primary);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    @media (min-width: 768px) {
+      .benefits-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    .benefit-card {
+      background-color: var(--bg-tertiary);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 1.5rem;
+      transition: 0.3s;
+    }
+    .benefit-card:hover {
+      border-color: var(--gold-primary);
+      background-color: var(--bg-secondary);
+      box-shadow: 0 10px 25px rgba(255, 94, 20, 0.05);
+    }
+    .benefit-card h4 {
+      color: var(--text-primary);
+      margin-bottom: 0.5rem;
+      font-size: 16px;
+      font-weight: 700;
+    }
+    .process-timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      border-left: 2px solid var(--gold-primary);
+      padding-left: 2rem;
+      margin-left: 1rem;
+    }
+    .process-step {
+      position: relative;
+    }
+    .process-step::before {
+      content: '';
+      position: absolute;
+      left: -2.55rem;
+      top: 0.25rem;
+      width: 14px;
+      height: 14px;
+      background-color: var(--gold-primary);
+      border-radius: 50%;
+      border: 3px solid var(--bg-primary);
+    }
+    .process-step h4 {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 0.35rem;
+      color: var(--text-primary);
+    }
+    .deliverables-list {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+    @media (min-width: 768px) {
+      .deliverables-list {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    .deliverable-item {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      background-color: var(--bg-tertiary);
+      border: 1px solid var(--border-color);
+      padding: 1rem 1.5rem;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 14px;
+      color: var(--text-primary);
+    }
+    .deliverable-item i {
+      color: var(--gold-primary);
+    }
+    .service-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      margin-top: 4rem;
+      justify-content: center;
+      border-top: 1px solid var(--border-color);
+      padding-top: 3rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar (Single-Row Absolute Layout matching Reference) -->
+  <header id="dynamic-header">
+    <div class="header-bottom">
+      <div class="container">
+        <div class="logo">
+          <a href="../index.html">Sarah<span>.Yaseen</span></a>
+        </div>
+        
+        <button class="hamburger" id="hamburger-menu" aria-label="Toggle Navigation">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+        
+        <nav class="nav-menu" id="nav-menu-list">
+          <ul>
+            <li><a href="../index.html" class="nav-link">Home</a></li>
+            <li class="dropdown active">
+              <a href="#" class="nav-link dropdown-toggle-btn active">Portfolio</a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-item"><a href="wordpress.html">WordPress</a></li>
+                <li class="dropdown-item"><a href="ui-ux.html">UI/UX Design</a></li>
+                <li class="dropdown-item"><a href="graphic-design.html">Graphic Designing</a></li>
+                <li class="dropdown-item"><a href="etsy.html">Etsy Products</a></li>
+              </ul>
+            </li>
+            <li><a href="../about.html" class="nav-link">About</a></li>
+            <li><a href="../contact.html" class="nav-link">Contact</a></li>
+          </ul>
+        </nav>
+        
+        <div class="header-action-btn">
+          <a href="../contact.html" class="btn-nav-cta">Let's Connect</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Service Details Dynamic Container -->
+  <section class="section-padding" style="background-color: var(--bg-primary); min-height: 80vh;">
+    <div class="container" id="service-detail-container">
+      <!-- Loading State -->
+      <div class="text-center py-20">
+        <i class="fa-solid fa-circle-notch fa-spin text-4xl text-gold-primary mb-4" style="color: var(--gold-primary);"></i>
+        <p style="color: var(--text-muted); font-size: 0.8rem; text-transform: uppercase; tracking-widest: 2px;">Loading Service Details...</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-logo">Sarah<span>.Yaseen</span></div>
+          <p class="footer-desc">Creating modern, responsive WordPress websites, interface flows in Figma, and editable branding products in Canva.</p>
+        </div>
+        <div>
+          <h4 class="footer-title">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../about.html">About Me</a></li>
+            <li><a href="wordpress.html">WordPress Development</a></li>
+            <li><a href="ui-ux.html">UI/UX Design</a></li>
+            <li><a href="graphic-design.html">Graphic Designing</a></li>
+            <li><a href="etsy.html">Etsy Products</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">Contact</h4>
+          <div class="footer-contact">
+            <div class="footer-contact-item">
+              <i class="fa-solid fa-phone"></i>
+              <span>0335 7423475</span>
+            </div>
+            <div class="footer-contact-item">
+              <i class="fa-solid fa-envelope"></i>
+              <span>sarahyaseen2056@gmail.com</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2026 Sarah Yaseen. All Rights Reserved. <a href="/admin" style="color: inherit; opacity: 0.3; margin-left: 8px;" title="Admin Dashboard"><i class="fa-solid fa-lock" style="font-size: 9px;"></i></a></p>
+        <p>Built with <i class="fa-solid fa-heart" style="color: var(--gold-primary);"></i> by Antigravity</p>
+      </div>
+      
+      <!-- Huge footer watermark outline watermark text -->
+      <div class="footer-watermark">
+        Sarah Yaseen
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="../js/api.js"></script>
+  <script src="../js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sarah Yaseen | WordPress Developer, UI/UX & Graphic Designer</title>
+  
+  <!-- Meta Tags for SEO -->
+  <meta name="description" content="Sarah Yaseen is a WordPress Developer, UI/UX Designer, Graphic Designer, and Etsy Product Designer with 3+ years of experience. View portfolio of Elementor websites, Figma designs, and Canva templates.">
+  <meta name="keywords" content="WordPress Developer, UI/UX Designer, Figma, Elementor, Canva, Graphic Design, Etsy Templates, Freelance Web Designer">
+  <meta name="author" content="Sarah Yaseen">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/profile-placeholder.svg">
+</head>
+<body>
+
+  <!-- Navigation Bar (Single-Row Absolute Layout matching Reference) -->
+  <header id="dynamic-header">
+    <div class="header-bottom">
+      <div class="container">
+        <div class="logo">
+          <a href="index.html">Sarah<span>.Yaseen</span></a>
+        </div>
+        
+        <button class="hamburger" id="hamburger-menu" aria-label="Toggle Navigation">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+        
+        <nav class="nav-menu" id="nav-menu-list">
+          <ul>
+            <li><a href="index.html" class="nav-link active">Home</a></li>
+            <li class="dropdown">
+              <a href="#" class="nav-link dropdown-toggle-btn">Portfolio</a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-item"><a href="portfolio/wordpress.html">WordPress</a></li>
+                <li class="dropdown-item"><a href="portfolio/ui-ux.html">UI/UX Design</a></li>
+                <li class="dropdown-item"><a href="portfolio/graphic-design.html">Graphic Designing</a></li>
+                <li class="dropdown-item"><a href="portfolio/etsy.html">Etsy Products</a></li>
+              </ul>
+            </li>
+            <li><a href="about.html" class="nav-link">About</a></li>
+            <li><a href="contact.html" class="nav-link">Contact</a></li>
+          </ul>
+        </nav>
+        
+        <div class="header-action-btn">
+          <a href="contact.html" class="btn-nav-cta">Let's Connect</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="container relative-container">
+      <div class="premium-hero-grid">
+        
+        <!-- Left Column: Content -->
+        <div class="hero-col-left reveal">
+          <span class="hero-greetings">HI THERE!</span>
+          <h1 id="hero-title" class="hero-name-heading">I'M <span class="text-border-2">SARAH YASEEN</span></h1>
+          <div class="typewriter-container">
+            I am a <span id="typewriter" class="gold-text"></span><span class="typewriter-cursor"></span>
+          </div>
+          <p class="hero-intro">
+            A creative digital professional with 3 years of experience building clean, modern, and user-friendly digital experiences — from responsive WordPress websites and intuitive UI/UX designs in Figma, to eye-catching graphic designs and ready-to-edit Etsy templates in Canva.
+          </p>
+          <div class="hero-actions">
+            <a href="portfolio/wordpress.html" class="btn btn-primary">View Portfolio</a>
+            <a href="#contact" class="btn btn-secondary">Contact Me</a>
+          </div>
+          <div class="contact-details-box">
+            <div class="contact-item">
+              <i class="fa-solid fa-envelope"></i>
+              <a href="mailto:sarahyaseen2056@gmail.com">sarahyaseen2056@gmail.com</a>
+            </div>
+            <div class="contact-item">
+              <i class="fa-solid fa-phone"></i>
+              <a href="tel:03357423475">0335 7423475</a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Right Column: Image (Clean visual layout) -->
+        <div class="hero-col-right reveal">
+          <div class="premium-hero-image-wrapper">
+            <img src="assets/profile.jpg" alt="Sarah Yaseen Grayscale Headshot" class="premium-hero-img" loading="lazy">
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- Marquee Scrolling Tickers (Recreating reference visual style) -->
+  <div class="marquee-wrapper reveal">
+    <div class="marquee-band-yellow">
+      <div class="marquee-content">
+        / Sarah Yaseen / WordPress Developer / UI/UX Designer / Graphic Designer / Etsy Product Designer / Sarah Yaseen / WordPress Developer / UI/UX Designer / Graphic Designer / Etsy Product Designer
+      </div>
+      <div class="marquee-content">
+        / Sarah Yaseen / WordPress Developer / UI/UX Designer / Graphic Designer / Etsy Product Designer / Sarah Yaseen / WordPress Developer / UI/UX Designer / Graphic Designer / Etsy Product Designer
+      </div>
+    </div>
+    <div class="marquee-band-dark">
+      <div class="marquee-content">
+        / Creative Portfolio / 2026 Portfolio / Digital Experience Designer / Creative Portfolio / 2026 Portfolio / Digital Experience Designer
+      </div>
+      <div class="marquee-content">
+        / Creative Portfolio / 2026 Portfolio / Digital Experience Designer / Creative Portfolio / 2026 Portfolio / Digital Experience Designer
+      </div>
+    </div>
+  </div>
+
+  <!-- About Section -->
+  <section id="about" class="about section-padding">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-visual reveal">
+          <div class="about-image">
+            <img src="assets/profile.jpg" alt="Sarah Yaseen Profile Portrait" loading="lazy">
+          </div>
+        </div>
+        
+        <div class="about-content reveal reveal-delay-1">
+          <div class="section-header-style">
+            <span class="heading-subtitle">About Me</span>
+            <h2>Who I Am</h2>
+          </div>
+          <p>
+            I'm Sarah Yaseen, a WordPress Developer and UI/UX Designer with 3 years of experience creating clean, modern, and user-friendly digital experiences for web and mobile. I specialize in designing intuitive interfaces and smooth user journeys in Figma, and building fully responsive WordPress websites using Elementor.
+          </p>
+          <p>
+            I also bring a strong eye for visual design — creating graphics and Etsy-ready templates that are both functional and beautiful. My focus is always on combining aesthetics with usability to deliver effective, engaging design solutions.
+          </p>
+          
+          <!-- Stats list aligned next to content -->
+          <div class="about-stats-stack">
+            <div class="about-stat-row">
+              <span class="about-stat-number">3+</span>
+              <span class="about-stat-label">Years Experience</span>
+            </div>
+            <div class="about-stat-row">
+              <span class="about-stat-number">25+</span>
+              <span class="about-stat-label">WordPress Projects</span>
+            </div>
+            <div class="about-stat-row">
+              <span class="about-stat-number">15+</span>
+              <span class="about-stat-label">UI/UX Case Studies</span>
+            </div>
+            <div class="about-stat-row">
+              <span class="about-stat-number">300+</span>
+              <span class="about-stat-label">Etsy Templates</span>
+            </div>
+          </div>
+          
+          <div style="margin-top: 2.5rem;">
+            <a href="#contact" class="btn btn-primary">Let's Connect</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Expertise / Services Section Rebuilt in Rows Layout -->
+  <section id="expertise" class="expertise section-padding">
+    <div class="container">
+      <div class="section-header-style text-center">
+        <span class="heading-subtitle">My Expertise</span>
+        <h2>What I Do Best</h2>
+      </div>
+      
+      <div class="expertise-rows-container" id="expertise-rows-container">
+        <!-- Row 1 -->
+        <div class="expertise-row-item reveal reveal-delay-1" onclick="window.location.href='portfolio/wordpress.html'">
+          <div class="expertise-row-left">
+            <span class="expertise-row-num">01</span>
+            <h3 class="expertise-row-title">WordPress Development</h3>
+          </div>
+          <div class="expertise-row-right">
+            <p class="expertise-row-desc">Building responsive, SEO-friendly websites using WordPress & Elementor for businesses across industries.</p>
+            <div class="expertise-row-link-circle"><i class="fa-solid fa-arrow-right"></i></div>
+          </div>
+        </div>
+        
+        <!-- Row 2 -->
+        <div class="expertise-row-item reveal reveal-delay-2" onclick="window.location.href='portfolio/ui-ux.html'">
+          <div class="expertise-row-left">
+            <span class="expertise-row-num">02</span>
+            <h3 class="expertise-row-title">UI/UX Design</h3>
+          </div>
+          <div class="expertise-row-right">
+            <p class="expertise-row-desc">Designing intuitive user interfaces and end-to-end user flows in Figma for web and mobile apps.</p>
+            <div class="expertise-row-link-circle"><i class="fa-solid fa-arrow-right"></i></div>
+          </div>
+        </div>
+        
+        <!-- Row 3 -->
+        <div class="expertise-row-item reveal reveal-delay-3" onclick="window.location.href='portfolio/graphic-design.html'">
+          <div class="expertise-row-left">
+            <span class="expertise-row-num">03</span>
+            <h3 class="expertise-row-title">Graphic Designing</h3>
+          </div>
+          <div class="expertise-row-right">
+            <p class="expertise-row-desc">Creating scroll-stopping social media ads, banners, and branded visual content.</p>
+            <div class="expertise-row-link-circle"><i class="fa-solid fa-arrow-right"></i></div>
+          </div>
+        </div>
+        <!-- Row 4 -->
+        <div class="expertise-row-item reveal reveal-delay-2" onclick="window.location.href='portfolio/etsy.html'">
+          <div class="expertise-row-left">
+            <span class="expertise-row-num">04</span>
+            <h3 class="expertise-row-title">Etsy Digital Products</h3>
+          </div>
+          <div class="expertise-row-right">
+            <p class="expertise-row-desc">Designing editable Canva templates (flyers, brochures, social posts) sold as digital products on Etsy.</p>
+            <div class="expertise-row-link-circle"><i class="fa-solid fa-arrow-right"></i></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Work Preview -->
+  <section id="featured" class="featured section-padding text-center">
+    <div class="container">
+      <div class="section-header-style text-center">
+        <span class="heading-subtitle">Featured Work</span>
+        <h2>Explore My Projects</h2>
+      </div>
+      
+      <div class="featured-grid" id="featured-projects-grid">
+        <!-- Teaser 1: WordPress -->
+        <div class="project-preview-card reveal reveal-delay-1">
+          <div class="media-placeholder">
+            <div class="media-placeholder-icon">
+              <i class="fa-brands fa-wordpress"></i>
+            </div>
+            <div class="media-placeholder-text">German Car Service</div>
+            <div class="media-placeholder-sub">[WordPress Website Screenshot]</div>
+          </div>
+          <div class="project-preview-info text-left">
+            <div class="project-preview-category">WordPress</div>
+            <h3 class="project-preview-title">German Car Service Website</h3>
+            <p class="project-preview-text">Modern WordPress portal built with Elementor featuring a responsive layout and service modules tailored for premium automotive brands.</p>
+            <a href="portfolio/wordpress.html" class="expertise-link">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+        
+        <!-- Teaser 2: UI/UX -->
+        <div class="project-preview-card reveal reveal-delay-2">
+          <div class="media-placeholder">
+            <div class="media-placeholder-icon">
+              <i class="fa-brands fa-figma"></i>
+            </div>
+            <div class="media-placeholder-text">First Alert Fleet</div>
+            <div class="media-placeholder-sub">[Figma Dashboard Mockup]</div>
+          </div>
+          <div class="project-preview-info text-left">
+            <div class="project-preview-category">UI/UX Design</div>
+            <h3 class="project-preview-title">Fleet Safety Dashboard</h3>
+            <p class="project-preview-text">Real-time incident reporting dashboard covering alert feeds, task queues, and AI-risk logs with component systems in Figma.</p>
+            <a href="portfolio/ui-ux.html" class="expertise-link">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+        
+        <!-- Teaser 3: Graphic Design -->
+        <div class="project-preview-card reveal reveal-delay-3">
+          <div class="media-placeholder">
+            <div class="media-placeholder-icon">
+              <i class="fa-solid fa-image"></i>
+            </div>
+            <div class="media-placeholder-text">Ad Creatives</div>
+            <div class="media-placeholder-sub">[Social Media Ads Grid]</div>
+          </div>
+          <div class="project-preview-info text-left">
+            <div class="project-preview-category">Graphic Design</div>
+            <h3 class="project-preview-title">Social Campaign Banner</h3>
+            <p class="project-preview-text">Eye-catching social media flyers and product promotion ads designed for real client campaigns and scroll-stopping engagement.</p>
+            <a href="portfolio/graphic-design.html" class="expertise-link">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="reveal" style="margin-top: 30px;">
+        <a href="portfolio/wordpress.html" class="btn btn-primary">Browse All Portfolios</a>
+      </div>
+      
+      <!-- Client Tools Strip (Reference Graphic) -->
+      <div class="client-logos-strip reveal">
+        <div class="logos-ticker">
+          <div class="logos-ticker-track">
+            <span class="logo-item">Figma</span>
+            <span class="logo-item">WordPress</span>
+            <span class="logo-item">Elementor</span>
+            <span class="logo-item">Canva</span>
+            <span class="logo-item">Illustrator</span>
+            <span class="logo-item">Photoshop</span>
+          </div>
+          <div class="logos-ticker-track">
+            <span class="logo-item">Figma</span>
+            <span class="logo-item">WordPress</span>
+            <span class="logo-item">Elementor</span>
+            <span class="logo-item">Canva</span>
+            <span class="logo-item">Illustrator</span>
+            <span class="logo-item">Photoshop</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="testimonials section-padding">
+    <div class="container text-center">
+      <div class="section-header-style text-center">
+        <span class="heading-subtitle">Client Testimonials</span>
+        <h2>What Collaborators Say</h2>
+      </div>
+      <p class="gallery-intro reveal reveal-delay-1" style="max-width: 600px; margin-left: auto; margin-right: auto; margin-bottom: 4rem; font-size: 15px;">
+        What my clients and collaborators say about my WordPress development, UI/UX, and graphic design deliverables.
+      </p>
+      
+      <!-- Testimonials Horizontal Ticker (Motion Effect) -->
+      <div class="testimonials-wrapper reveal">
+        <div class="testimonials-ticker">
+          
+          <!-- Testimonial 1 -->
+          <div class="testimonial-card">
+            <div class="testimonial-stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p class="testimonial-text">"Sarah developed a stunning WordPress site for our agency. Her Elementor skills are second to none, and she delivered ahead of schedule."</p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">LH</div>
+              <div class="testimonial-info">
+                <h4>Liam Henderson</h4>
+                <span>Founder, Real Estate Group</span>
+              </div>
+            </div>
+          </div>
+  
+          <!-- Testimonial 2 -->
+          <div class="testimonial-card">
+            <div class="testimonial-stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p class="testimonial-text">"The UI/UX Figma flow Sarah designed for our booking app is exceptionally clean. Very logical, beautifully structured components."</p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">ER</div>
+              <div class="testimonial-info">
+                <h4>Elena Rostova</h4>
+                <span>Creative Director</span>
+              </div>
+            </div>
+          </div>
+  
+          <!-- Testimonial 3 -->
+          <div class="testimonial-card">
+            <div class="testimonial-stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p class="testimonial-text">"Sarah's Canva templates are bestsellers in my shop. Very high quality design, easy for customers to edit, and extremely clean layout."</p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">MT</div>
+              <div class="testimonial-info">
+                <h4>Marcus Thorne</h4>
+                <span>Etsy Shop Owner</span>
+              </div>
+            </div>
+          </div>
+  
+          <!-- Testimonial 4 -->
+          <div class="testimonial-card">
+            <div class="testimonial-stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p class="testimonial-text">"We hired Sarah for our ad campaign design, and the engagement rate on Facebook went up by 30%. Absolutely beautiful creatives!"</p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">SV</div>
+              <div class="testimonial-info">
+                <h4>Sophia Vance</h4>
+                <span>Marketing Manager</span>
+              </div>
+            </div>
+          </div>
+  
+          <!-- Testimonial 5 -->
+          <div class="testimonial-card">
+            <div class="testimonial-stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p class="testimonial-text">"Excellent communication and outstanding technical work on our Elementor integration. She was very responsive to our feedback."</p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">RP</div>
+              <div class="testimonial-info">
+                <h4>Rajesh Patel</h4>
+                <span>Tech Startup Lead</span>
+              </div>
+            </div>
+          </div>
+  
+          <!-- Testimonial 6 -->
+          <div class="testimonial-card">
+            <div class="testimonial-stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p class="testimonial-text">"The planners and stationery templates Sarah designed for us are stunning. She took our raw ideas and turned them into a gorgeous brand kit."</p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">AD</div>
+              <div class="testimonial-info">
+                <h4>Amina Diop</h4>
+                <span>Blogger & Educator</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 7 (Ayesha Khan) -->
+          <div class="testimonial-card">
+            <div class="testimonial-stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p class="testimonial-text">"Sarah delivered exactly what I needed. The designs were professional, creative, and perfectly matched my brand."</p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">AK</div>
+              <div class="testimonial-info">
+                <h4>Ayesha Khan</h4>
+                <span>Lahore, Pakistan</span>
+              </div>
+            </div>
+          </div>
+  
+          <!-- Testimonial 8 (Hamza Ali) -->
+          <div class="testimonial-card">
+            <div class="testimonial-stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p class="testimonial-text">"Working with Sarah was a great experience. She understood my requirements quickly and delivered high-quality work on time."</p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">HA</div>
+              <div class="testimonial-info">
+                <h4>Hamza Ali</h4>
+                <span>Karachi, Pakistan</span>
+              </div>
+            </div>
+          </div>
+  
+          <!-- Testimonial 9 (Maham Raza) -->
+          <div class="testimonial-card">
+            <div class="testimonial-stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p class="testimonial-text">"Very impressed with the attention to detail. The final designs looked modern, clean, and professional."</p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">MR</div>
+              <div class="testimonial-info">
+                <h4>Maham Raza</h4>
+                <span>Islamabad, Pakistan</span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- ================= DUPLICATE SET FOR SEAMLESS LOOPING ================= -->
+          
+          <!-- Testimonial 1 Duplicate -->
+          <div class="testimonial-card">
+            <div class="testimonial-stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p class="testimonial-text">"Sarah developed a stunning WordPress site for our agency. Her Elementor skills are second to none, and she delivered ahead of schedule."</p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">LH</div>
+              <div class="testimonial-info">
+                <h4>Liam Henderson</h4>
+                <span>Founder, Real Estate Group</span>
+              </div>
+            </div>
+          </div>
+  
+          <!-- Testimonial 2 Duplicate -->
+          <div class="testimonial-card">
+            <div class="testimonial-stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p class="testimonial-text">"The UI/UX Figma flow Sarah designed for our booking app is exceptionally clean. Very logical, beautifully structured components."</p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">ER</div>
+              <div class="testimonial-info">
+                <h4>Elena Rostova</h4>
+                <span>Creative Director</span>
+              </div>
+            </div>
+          </div>
+  
+          <!-- Testimonial 3 Duplicate -->
+          <div class="testimonial-card">
+            <div class="testimonial-stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p class="testimonial-text">"Sarah's Canva templates are bestsellers in my shop. Very high quality design, easy for customers to edit, and extremely clean layout."</p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">MT</div>
+              <div class="testimonial-info">
+                <h4>Marcus Thorne</h4>
+                <span>Etsy Shop Owner</span>
+              </div>
+            </div>
+          </div>
+  
+          <!-- Testimonial 4 Duplicate -->
+          <div class="testimonial-card">
+            <div class="testimonial-stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p class="testimonial-text">"We hired Sarah for our ad campaign design, and the engagement rate on Facebook went up by 30%. Absolutely beautiful creatives!"</p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">SV</div>
+              <div class="testimonial-info">
+                <h4>Sophia Vance</h4>
+                <span>Marketing Manager</span>
+              </div>
+            </div>
+          </div>
+  
+          <!-- Testimonial 5 Duplicate -->
+          <div class="testimonial-card">
+            <div class="testimonial-stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p class="testimonial-text">"Excellent communication and outstanding technical work on our Elementor integration. She was very responsive to our feedback."</p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">RP</div>
+              <div class="testimonial-info">
+                <h4>Rajesh Patel</h4>
+                <span>Tech Startup Lead</span>
+              </div>
+            </div>
+          </div>
+  
+          <!-- Testimonial 6 Duplicate -->
+          <div class="testimonial-card">
+            <div class="testimonial-stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p class="testimonial-text">"The planners and stationery templates Sarah designed for us are stunning. She took our raw ideas and turned them into a gorgeous brand kit."</p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">AD</div>
+              <div class="testimonial-info">
+                <h4>Amina Diop</h4>
+                <span>Blogger & Educator</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 7 Duplicate (Ayesha Khan) -->
+          <div class="testimonial-card">
+            <div class="testimonial-stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p class="testimonial-text">"Sarah delivered exactly what I needed. The designs were professional, creative, and perfectly matched my brand."</p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">AK</div>
+              <div class="testimonial-info">
+                <h4>Ayesha Khan</h4>
+                <span>Lahore, Pakistan</span>
+              </div>
+            </div>
+          </div>
+  
+          <!-- Testimonial 8 Duplicate (Hamza Ali) -->
+          <div class="testimonial-card">
+            <div class="testimonial-stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p class="testimonial-text">"Working with Sarah was a great experience. She understood my requirements quickly and delivered high-quality work on time."</p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">HA</div>
+              <div class="testimonial-info">
+                <h4>Hamza Ali</h4>
+                <span>Karachi, Pakistan</span>
+              </div>
+            </div>
+          </div>
+  
+          <!-- Testimonial 9 Duplicate (Maham Raza) -->
+          <div class="testimonial-card">
+            <div class="testimonial-stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p class="testimonial-text">"Very impressed with the attention to detail. The final designs looked modern, clean, and professional."</p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">MR</div>
+              <div class="testimonial-info">
+                <h4>Maham Raza</h4>
+                <span>Islamabad, Pakistan</span>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact section-padding">
+    <div class="container">
+      <div class="contact-grid">
+        <!-- Info Column -->
+        <div class="contact-info-panel reveal">
+          <div class="section-header-style">
+            <span class="heading-subtitle">Contact Me</span>
+            <h2>Get In Touch</h2>
+          </div>
+          <p class="contact-sub">I am always open to new opportunities and collaborations in WordPress development, UI/UX, and graphic design.</p>
+          
+          <div class="contact-details">
+            <div class="contact-card">
+              <div class="contact-icon-box">
+                <i class="fa-solid fa-phone"></i>
+              </div>
+              <div class="contact-text-box">
+                <span>Call / WhatsApp</span>
+                <p>0335 7423475</p>
+              </div>
+            </div>
+            
+            <div class="contact-card">
+              <div class="contact-icon-box">
+                <i class="fa-solid fa-envelope"></i>
+              </div>
+              <div class="contact-text-box">
+                <span>Email Address</span>
+                <p>sarahyaseen2056@gmail.com</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="social-icons">
+            <a href="#" class="social-icon" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#" class="social-icon" target="_blank" aria-label="Behance"><i class="fa-brands fa-behance"></i></a>
+          </div>
+        </div>
+        
+        <!-- Form Column -->
+        <div class="contact-form-panel reveal reveal-delay-1">
+          <form id="portfolio-contact-form">
+            <div class="form-group">
+              <label for="form-name" class="form-label">Full Name</label>
+              <input type="text" id="form-name" class="form-control" placeholder="John Doe" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="form-email" class="form-label">Email Address</label>
+              <input type="email" id="form-email" class="form-control" placeholder="john@example.com" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="form-subject" class="form-label">Subject</label>
+              <input type="text" id="form-subject" class="form-control" placeholder="Project Inquiry" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="form-message" class="form-label">Your Message</label>
+              <textarea id="form-message" class="form-control" placeholder="Tell me about your project detail..." required></textarea>
+            </div>
+            
+            <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+            <div id="form-status-msg" class="form-status"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-logo">Sarah<span>.Yaseen</span></div>
+          <p class="footer-desc">Creating modern, responsive WordPress websites, interface flows in Figma, and editable branding products in Canva.</p>
+        </div>
+        <div>
+          <h4 class="footer-title">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="portfolio/wordpress.html">WordPress Development</a></li>
+            <li><a href="portfolio/ui-ux.html">UI/UX Design</a></li>
+            <li><a href="portfolio/graphic-design.html">Graphic Designing</a></li>
+            <li><a href="portfolio/etsy.html">Etsy Products</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">Contact</h4>
+          <div class="footer-contact">
+            <div class="footer-contact-item">
+              <i class="fa-solid fa-phone"></i>
+              <span>0335 7423475</span>
+            </div>
+            <div class="footer-contact-item">
+              <i class="fa-solid fa-envelope"></i>
+              <span>sarahyaseen2056@gmail.com</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2026 Sarah Yaseen. All Rights Reserved. <a href="/admin" style="color: inherit; opacity: 0.3; margin-left: 8px;" title="Admin Dashboard"><i class="fa-solid fa-lock" style="font-size: 9px;"></i></a></p>
+        <p>Built with <i class="fa-solid fa-heart" style="color: var(--gold-primary);"></i> by Antigravity</p>
+      </div>
+      
+      <!-- Huge footer watermark outline watermark text -->
+      <div class="footer-watermark">
+        Sarah Yaseen
+      </div>
+    </div>
+  </footer>
+
+  <!-- Main JavaScript -->
+  <script src="js/api.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

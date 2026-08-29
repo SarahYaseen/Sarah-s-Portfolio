@@ -1,0 +1,67 @@
+/* Custom Styles for Portfolio Admin Panel */
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0A0A0A;
+}
+::-webkit-scrollbar-thumb {
+  background: #161616;
+  border: 1px solid #0A0A0A;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #D4AF37;
+}
+
+/* Glassmorphism Cards */
+.glass-panel {
+  background-color: rgba(17, 17, 17, 0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(212, 175, 55, 0.08);
+}
+
+.glass-panel-hover:hover {
+  border-color: rgba(212, 175, 55, 0.3);
+  box-shadow: 0 10px 25px rgba(212, 175, 55, 0.05);
+}
+
+/* Custom Text inputs inside CMS form */
+.form-input-focus:focus {
+  border-color: #D4AF37;
+  box-shadow: 0 0 8px rgba(212, 175, 55, 0.2);
+}
+
+/* Slide Down / Fade Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
+/* Rich Text/Textarea fallback */
+.wysiwyg-editor {
+  min-height: 200px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background-color: #0A0A0A;
+  color: #F5F5F0;
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.wysiwyg-editor:focus {
+  outline: none;
+  border-color: #D4AF37;
+  box-shadow: 0 0 8px rgba(212, 175, 55, 0.2);
+}
+
+/* Scroll Lock class for modals */
+body.modal-open {
+  overflow: hidden;
+}

@@ -1,0 +1,7 @@
+node_modules/
+.DS_Store
+*.log
+.system_generated/
+scratch/
+.user_uploaded/
+db.json.bak

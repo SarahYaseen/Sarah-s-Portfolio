@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me | Sarah Yaseen</title>
+  
+  <!-- Meta Tags for SEO -->
+  <meta name="description" content="Learn more about Sarah Yaseen - WordPress Developer, UI/UX Designer, and Canva Template Designer with 3+ years of professional experience.">
+  <meta name="keywords" content="WordPress Developer, UI/UX Designer, Figma Expert, Elementor Developer, Canva Templates">
+  <meta name="author" content="Sarah Yaseen">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/profile-placeholder.svg">
+</head>
+<body>
+
+  <!-- Navigation Bar (Single-Row Absolute Layout matching Reference) -->
+  <header id="dynamic-header">
+    <div class="header-bottom">
+      <div class="container">
+        <div class="logo">
+          <a href="index.html">Sarah<span>.Yaseen</span></a>
+        </div>
+        
+        <button class="hamburger" id="hamburger-menu" aria-label="Toggle Navigation">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+        
+        <nav class="nav-menu" id="nav-menu-list">
+          <ul>
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li class="dropdown">
+              <a href="#" class="nav-link dropdown-toggle-btn">Portfolio</a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-item"><a href="portfolio/wordpress.html">WordPress</a></li>
+                <li class="dropdown-item"><a href="portfolio/ui-ux.html">UI/UX Design</a></li>
+                <li class="dropdown-item"><a href="portfolio/graphic-design.html">Graphic Designing</a></li>
+                <li class="dropdown-item"><a href="portfolio/etsy.html">Etsy Products</a></li>
+              </ul>
+            </li>
+            <li><a href="about.html" class="nav-link active">About</a></li>
+            <li><a href="contact.html" class="nav-link">Contact</a></li>
+          </ul>
+        </nav>
+        
+        <div class="header-action-btn">
+          <a href="contact.html" class="btn-nav-cta">Let's Connect</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Portfolio Header Section -->
+  <section class="portfolio-header">
+    <div class="container reveal">
+      <h1>About Me</h1>
+      <p>WordPress Developer, UI/UX Designer & Canva Content Specialist based in Pakistan.</p>
+    </div>
+  </section>
+
+  <!-- About Details Section -->
+  <section class="section-padding" style="background-color: var(--bg-primary);">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-visual reveal">
+          <div class="about-image">
+            <img src="assets/profile.jpg" alt="Sarah Yaseen Profile Portrait" loading="lazy">
+          </div>
+        </div>
+        
+        <div class="about-content reveal reveal-delay-1">
+          <div class="section-header-style">
+            <span class="heading-subtitle">About Me</span>
+            <h2>Who I Am</h2>
+          </div>
+          <p>
+            I'm Sarah Yaseen, a passionate digital specialist with 3 years of hands-on experience building clean, responsive WordPress websites using Elementor, designing high-converting UI/UX layouts in Figma, and developing editable Canva templates sold as digital products on Etsy.
+          </p>
+          <p>
+            My work combines the logical engineering of WordPress development with the creative sensibilities of user interface design. I believe a great digital experience must be both visually stunning and friction-free.
+          </p>
+          
+          <div style="margin-top: 2rem;">
+            <a href="contact.html" class="btn btn-primary">Start a Project</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Inventory Section -->
+  <section id="skills" class="section-padding" style="background-color: var(--bg-tertiary); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
+    <div class="container">
+      <div class="section-header-style text-center">
+        <span class="heading-subtitle">My Skillset</span>
+        <h2>Skills & Toolset</h2>
+      </div>
+      <p class="text-center reveal text-muted" style="margin-bottom: 3.5rem; font-size: 14px;">Click any skill bar to view associated projects, tools, and experiences.</p>
+      
+      <div style="display: grid; grid-template-columns: 1fr; gap: 2rem; max-width: 800px; margin: 0 auto;" class="reveal reveal-delay-1">
+        
+        <!-- Skill 1 -->
+        <div onclick="window.location.href='portfolio/skill.html?id=wordpress'" style="cursor: pointer; padding: 0.5rem; transition: 0.2s;" onmouseover="this.style.opacity=0.85" onmouseout="this.style.opacity=1">
+          <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem; font-size: 14px; font-weight: bold; color: var(--text-primary);">
+            <span>WordPress Development (Elementor) &rarr;</span>
+            <span style="color: var(--gold-primary);">95%</span>
+          </div>
+          <div style="background-color: var(--bg-primary); height: 8px; border-radius: 4px; overflow: hidden; border: 1px solid var(--border-color);">
+            <div style="background-color: var(--gold-primary); width: 95%; height: 100%; border-radius: 4px;"></div>
+          </div>
+        </div>
+
+        <!-- Skill 2 -->
+        <div onclick="window.location.href='portfolio/skill.html?id=ui-ux'" style="cursor: pointer; padding: 0.5rem; transition: 0.2s;" onmouseover="this.style.opacity=0.85" onmouseout="this.style.opacity=1">
+          <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem; font-size: 14px; font-weight: bold; color: var(--text-primary);">
+            <span>UI/UX Design (Figma) &rarr;</span>
+            <span style="color: var(--gold-primary);">90%</span>
+          </div>
+          <div style="background-color: var(--bg-primary); height: 8px; border-radius: 4px; overflow: hidden; border: 1px solid var(--border-color);">
+            <div style="background-color: var(--gold-primary); width: 90%; height: 100%; border-radius: 4px;"></div>
+          </div>
+        </div>
+
+        <!-- Skill 3 -->
+        <div onclick="window.location.href='portfolio/skill.html?id=graphic-design'" style="cursor: pointer; padding: 0.5rem; transition: 0.2s;" onmouseover="this.style.opacity=0.85" onmouseout="this.style.opacity=1">
+          <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem; font-size: 14px; font-weight: bold; color: var(--text-primary);">
+            <span>Graphic Design (Canva / Adobe Illustrator) &rarr;</span>
+            <span style="color: var(--gold-primary);">88%</span>
+          </div>
+          <div style="background-color: var(--bg-primary); height: 8px; border-radius: 4px; overflow: hidden; border: 1px solid var(--border-color);">
+            <div style="background-color: var(--gold-primary); width: 88%; height: 100%; border-radius: 4px;"></div>
+          </div>
+        </div>
+
+        <!-- Skill 4 -->
+        <div onclick="window.location.href='portfolio/skill.html?id=front-end'" style="cursor: pointer; padding: 0.5rem; transition: 0.2s;" onmouseover="this.style.opacity=0.85" onmouseout="this.style.opacity=1">
+          <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem; font-size: 14px; font-weight: bold; color: var(--text-primary);">
+            <span>HTML5, CSS3, ES6 JavaScript &rarr;</span>
+            <span style="color: var(--gold-primary);">80%</span>
+          </div>
+          <div style="background-color: var(--bg-primary); height: 8px; border-radius: 4px; overflow: hidden; border: 1px solid var(--border-color);">
+            <div style="background-color: var(--gold-primary); width: 80%; height: 100%; border-radius: 4px;"></div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Professional Timeline Section -->
+  <section class="section-padding" style="background-color: var(--bg-primary);">
+    <div class="container" style="max-width: 800px;">
+      <div class="section-header-style text-center">
+        <span class="heading-subtitle">History</span>
+        <h2>Professional Journey</h2>
+      </div>
+      
+      <div class="reveal reveal-delay-1" style="display: flex; flex-direction: column; gap: 2.5rem; border-left: 2px solid var(--gold-primary); padding-left: 2rem; margin-left: 1rem; text-align: left;">
+        
+        <!-- Experience 1 -->
+        <div style="position: relative;">
+          <div style="position: absolute; left: -2.6rem; top: 0.2rem; width: 14px; height: 14px; background-color: var(--gold-primary); border-radius: 50%; border: 3px solid var(--bg-primary);"></div>
+          <h3 style="font-size: 20px; color: var(--gold-primary); margin-bottom: 0.3rem;">Freelance WordPress Developer</h3>
+          <span style="font-size: 12px; color: var(--text-muted); font-weight: bold; letter-spacing: 1px;">2023 - PRESENT</span>
+          <p style="margin-top: 0.5rem; font-size: 15px; line-height: 1.7; color: var(--text-muted);">Designed and developed 20+ corporate websites, e-commerce stores, and booking portals using WordPress with Elementor. Focused on speed structure, page speed optimizations, and clean mobile responsiveness.</p>
+        </div>
+
+        <!-- Experience 2 -->
+        <div style="position: relative;">
+          <div style="position: absolute; left: -2.6rem; top: 0.2rem; width: 14px; height: 14px; background-color: var(--gold-primary); border-radius: 50%; border: 3px solid var(--bg-primary);"></div>
+          <h3 style="font-size: 20px; color: var(--gold-primary); margin-bottom: 0.3rem;">UI/UX Web Designer</h3>
+          <span style="font-size: 12px; color: var(--text-muted); font-weight: bold; letter-spacing: 1px;">2022 - PRESENT</span>
+          <p style="margin-top: 0.5rem; font-size: 15px; line-height: 1.7; color: var(--text-muted);">Designed complete interface suites, workflows, dashboard portals, and wireframes in Figma. Specialized in establishing typography scales, component libraries, and clean grid layouts for digital apps.</p>
+        </div>
+
+        <!-- Experience 3 -->
+        <div style="position: relative;">
+          <div style="position: absolute; left: -2.6rem; top: 0.2rem; width: 14px; height: 14px; background-color: var(--gold-primary); border-radius: 50%; border: 3px solid var(--bg-primary);"></div>
+          <h3 style="font-size: 20px; color: var(--gold-primary); margin-bottom: 0.3rem;">Etsy Template Creator (Canva Specialist)</h3>
+          <span style="font-size: 12px; color: var(--text-muted); font-weight: bold; letter-spacing: 1px;">2023 - PRESENT</span>
+          <p style="margin-top: 0.5rem; font-size: 15px; line-height: 1.7; color: var(--text-muted);">Designed editable Canva templates (brochures, Instagram stories, flyers, business cards) sold as digital download products on Etsy, maintaining high branding standards.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Education & Career Achievements Section -->
+  <section class="section-padding" style="background-color: var(--bg-tertiary); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
+    <div class="container" style="max-width: 800px;">
+      
+      <!-- Education Block -->
+      <div class="reveal" style="margin-bottom: 4rem;">
+        <h2 style="margin-bottom: 2rem; font-size: 28px;"><i class="fa-solid fa-graduation-cap" style="color: var(--gold-primary); margin-right: 10px;"></i> Education</h2>
+        <div style="background-color: var(--bg-primary); border: 1px solid var(--border-color); padding: 2rem; border-radius: 12px; text-align: left;">
+          <h3 style="font-size: 20px; color: var(--gold-primary); margin-bottom: 0.25rem;">Bachelor of Computer Science</h3>
+          <span style="font-size: 12px; color: var(--text-muted); font-weight: bold; letter-spacing: 1px;">2019 - 2023 | Pakistan</span>
+          <p style="margin-top: 0.5rem; font-size: 15px; line-height: 1.7; color: var(--text-muted);">Acquired fundamental software engineering concepts, database structure maps, user psychology, and web architectures.</p>
+        </div>
+      </div>
+
+      <!-- Highlights & Achievements Block -->
+      <div class="reveal">
+        <h2 style="margin-bottom: 2rem; font-size: 28px;"><i class="fa-solid fa-trophy" style="color: var(--gold-primary); margin-right: 10px;"></i> Highlights & Achievements</h2>
+        <div style="display: flex; flex-direction: column; gap: 1.5rem; text-align: left;">
+          
+          <div style="background-color: var(--bg-primary); border: 1px solid var(--border-color); padding: 1.5rem; border-radius: 12px; display: flex; gap: 1.5rem; align-items: flex-start;">
+            <i class="fa-solid fa-circle-check" style="color: var(--gold-primary); margin-top: 4px; font-size: 18px;"></i>
+            <div>
+              <h4 style="color: var(--text-primary); font-size: 18px; margin-bottom: 0.3rem;">Completed 15+ Web Portals</h4>
+              <p style="font-size: 14px; color: var(--text-muted); line-height: 1.6;">Designed, developed, and deployed corporate and booking portals with 100% client satisfaction rates.</p>
+            </div>
+          </div>
+
+          <div style="background-color: var(--bg-primary); border: 1px solid var(--border-color); padding: 1.5rem; border-radius: 12px; display: flex; gap: 1.5rem; align-items: flex-start;">
+            <i class="fa-solid fa-circle-check" style="color: var(--gold-primary); margin-top: 4px; font-size: 18px;"></i>
+            <div>
+              <h4 style="color: var(--text-primary); font-size: 18px; margin-bottom: 0.3rem;">Etsy Template Sales Launch</h4>
+              <p style="font-size: 14px; color: var(--text-muted); line-height: 1.6;">Successfully created and deployed 20+ Canva products generating active shop interactions.</p>
+            </div>
+          </div>
+
+          <div style="background-color: var(--bg-primary); border: 1px solid var(--border-color); padding: 1.5rem; border-radius: 12px; display: flex; gap: 1.5rem; align-items: flex-start;">
+            <i class="fa-solid fa-circle-check" style="color: var(--gold-primary); margin-top: 4px; font-size: 18px;"></i>
+            <div>
+              <h4 style="color: var(--text-primary); font-size: 18px; margin-bottom: 0.3rem;">Speed Auditing Certifications</h4>
+              <p style="font-size: 14px; color: var(--text-muted); line-height: 1.6;">Optimized business WordPress sites to perform with loading speeds under 1.5 seconds.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA Band & Footer -->
+  <section class="cta-band section-padding text-center" style="background-color: var(--bg-primary);">
+    <div class="container reveal">
+      <div class="section-header-style text-center">
+        <span class="heading-subtitle">Let's Collaborate</span>
+        <h2>Let's Work Together</h2>
+      </div>
+      <p style="color: var(--text-muted); max-width: 600px; margin: 0 auto 30px auto; font-size: 16px;">Always open to new opportunities and collaborations in WordPress development, UI/UX, and design.</p>
+      <a href="contact.html" class="btn btn-primary">Get in Touch</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-logo">Sarah<span>.Yaseen</span></div>
+          <p class="footer-desc">Creating modern, responsive WordPress websites, interface flows in Figma, and editable branding products in Canva.</p>
+        </div>
+        <div>
+          <h4 class="footer-title">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="portfolio/wordpress.html">WordPress Development</a></li>
+            <li><a href="portfolio/ui-ux.html">UI/UX Design</a></li>
+            <li><a href="portfolio/graphic-design.html">Graphic Designing</a></li>
+            <li><a href="portfolio/etsy.html">Etsy Products</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">Contact</h4>
+          <div class="footer-contact">
+            <div class="footer-contact-item">
+              <i class="fa-solid fa-phone"></i>
+              <span>0335 7423475</span>
+            </div>
+            <div class="footer-contact-item">
+              <i class="fa-solid fa-envelope"></i>
+              <span>sarahyaseen2056@gmail.com</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2026 Sarah Yaseen. All Rights Reserved. <a href="/admin" style="color: inherit; opacity: 0.3; margin-left: 8px;" title="Admin Dashboard"><i class="fa-solid fa-lock" style="font-size: 9px;"></i></a></p>
+        <p>Built with <i class="fa-solid fa-heart" style="color: var(--gold-primary);"></i> by Antigravity</p>
+      </div>
+      
+      <!-- Huge footer watermark outline watermark text -->
+      <div class="footer-watermark">
+        Sarah Yaseen
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script -->
+  <script src="js/api.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

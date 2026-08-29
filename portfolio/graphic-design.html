@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Graphic Designing Portfolio | Sarah Yaseen</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Browse Sarah Yaseen's Graphic Designing portfolio. Branded banners, social media campaigns, and product advertisements designed to drive conversions.">
+  <meta name="keywords" content="Graphic Design, Ad Creatives, Branding, Social Media Ads, Canva Templates, Banner Designer">
+  <meta name="author" content="Sarah Yaseen">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="../css/style.css">
+  
+  <!-- Premium Graphic Design Portfolio Styles -->
+  <style>
+    /* Reset style.css base auto-rows/columns for gallery-grid to make it modern & large */
+    #graphic-design-gallery-container.gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      grid-auto-rows: 320px;
+      gap: 2rem;
+      grid-auto-flow: dense;
+    }
+
+    /* Lightbox Overlay Styles */
+    .lightbox-overlay {
+      position: fixed;
+      z-index: 9999;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.95);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+    }
+    
+    .lightbox-overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+    
+    .lightbox-content {
+      position: relative;
+      max-width: 90%;
+      max-height: 80%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .lightbox-content img {
+      max-width: 100%;
+      max-height: 70vh;
+      border-radius: 8px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    }
+    
+    .lightbox-caption {
+      margin-top: 15px;
+      color: #fff;
+      font-size: 16px;
+      font-weight: 600;
+      text-align: center;
+    }
+    
+    .lightbox-close {
+      position: absolute;
+      top: 30px;
+      right: 30px;
+      font-size: 40px;
+      color: #fff;
+      background: none;
+      border: none;
+      cursor: pointer;
+      z-index: 10000;
+    }
+    
+    .lightbox-nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 35px;
+      color: #fff;
+      background: rgba(0, 0, 0, 0.5);
+      border: none;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: all 0.2s ease;
+    }
+    
+    .lightbox-nav:hover {
+      background: var(--gold-primary);
+    }
+    
+    .lightbox-nav.prev {
+      left: 30px;
+    }
+    
+    .lightbox-nav.next {
+      right: 30px;
+    }
+
+    @media (max-width: 768px) {
+      .lightbox-nav {
+        width: 45px;
+        height: 45px;
+        font-size: 20px;
+      }
+      .lightbox-nav.prev { left: 10px; }
+      .lightbox-nav.next { right: 10px; }
+    }
+  </style>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="../assets/profile-placeholder.svg">
+</head>
+<body>
+
+  <!-- Navigation Bar (Single-Row Absolute Layout matching Reference) -->
+  <header id="dynamic-header">
+    <div class="header-bottom">
+      <div class="container">
+        <div class="logo">
+          <a href="../index.html">Sarah<span>.Yaseen</span></a>
+        </div>
+        
+        <button class="hamburger" id="hamburger-menu" aria-label="Toggle Navigation">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+        
+        <nav class="nav-menu" id="nav-menu-list">
+          <ul>
+            <li><a href="../index.html" class="nav-link">Home</a></li>
+            <li class="dropdown active">
+              <a href="#" class="nav-link dropdown-toggle-btn active">Portfolio</a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-item"><a href="wordpress.html">WordPress</a></li>
+                <li class="dropdown-item"><a href="ui-ux.html">UI/UX Design</a></li>
+                <li class="dropdown-item"><a href="graphic-design.html">Graphic Designing</a></li>
+                <li class="dropdown-item"><a href="etsy.html">Etsy Products</a></li>
+              </ul>
+            </li>
+            <li><a href="../about.html" class="nav-link">About</a></li>
+            <li><a href="../contact.html" class="nav-link">Contact</a></li>
+          </ul>
+        </nav>
+        
+        <div class="header-action-btn">
+          <a href="../contact.html" class="btn-nav-cta">Let's Connect</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Portfolio Header Section -->
+  <section class="portfolio-header">
+    <div class="container reveal">
+      <h1>Creative Graphic Design That Makes Brands Stand Out</h1>
+      <p class="gallery-intro">Scroll-stopping ad campaigns, custom brand visual kits, and promotional digital designs engineered for high engagement and conversion.</p>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section class="section-padding" style="background-color: var(--bg-primary);">
+    <div class="container text-center">
+
+      <!-- Dynamic Category Filters -->
+      <div class="filter-container reveal reveal-delay-1" id="gd-filters-container">
+        <!-- Categories populated dynamically by JS -->
+      </div>
+
+      <!-- Masonry Grid Gallery -->
+      <div class="gallery-grid" id="graphic-design-gallery-container">
+        <!-- Loaded dynamically from database/admin uploads -->
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Band & Footer -->
+  <section class="cta-band section-padding text-center" style="background-color: var(--bg-primary);">
+    <div class="container reveal">
+      <div class="section-header-style text-center">
+        <span class="heading-subtitle">Let's Collaborate</span>
+        <h2>Let's Work Together</h2>
+      </div>
+      <p style="color: var(--text-muted); max-width: 600px; margin: 0 auto 30px auto; font-size: 16px;">Always open to new opportunities and collaborations in WordPress development, UI/UX, and design.</p>
+      <a href="../contact.html" class="btn btn-primary">Get in Touch</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-logo">Sarah<span>.Yaseen</span></div>
+          <p class="footer-desc">Creating modern, responsive WordPress websites, interface flows in Figma, and editable branding products in Canva.</p>
+        </div>
+        <div>
+          <h4 class="footer-title">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../about.html">About Me</a></li>
+            <li><a href="wordpress.html">WordPress Development</a></li>
+            <li><a href="ui-ux.html">UI/UX Design</a></li>
+            <li><a href="graphic-design.html">Graphic Designing</a></li>
+            <li><a href="etsy.html">Etsy Products</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-title">Contact</h4>
+          <div class="footer-contact">
+            <div class="footer-contact-item">
+              <i class="fa-solid fa-phone"></i>
+              <span>0335 7423475</span>
+            </div>
+            <div class="footer-contact-item">
+              <i class="fa-solid fa-envelope"></i>
+              <span>sarahyaseen2056@gmail.com</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2026 Sarah Yaseen. All Rights Reserved. <a href="/admin" style="color: inherit; opacity: 0.3; margin-left: 8px;" title="Admin Dashboard"><i class="fa-solid fa-lock" style="font-size: 9px;"></i></a></p>
+        <p>Built with <i class="fa-solid fa-heart" style="color: var(--gold-primary);"></i> by Antigravity</p>
+      </div>
+      
+      <!-- Huge footer watermark outline watermark text -->
+      <div class="footer-watermark">
+        Sarah Yaseen
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lightbox Overlay -->
+  <div id="lightbox-overlay" class="lightbox-overlay">
+    <button class="lightbox-close" id="lightbox-close" aria-label="Close Lightbox">&times;</button>
+    <button class="lightbox-nav prev" id="lightbox-prev" aria-label="Previous Image">&#10094;</button>
+    <button class="lightbox-nav next" id="lightbox-next" aria-label="Next Image">&#10095;</button>
+    <div class="lightbox-content">
+      <img id="lightbox-img" src="" alt="">
+      <div class="lightbox-caption" id="lightbox-caption"></div>
+    </div>
+  </div>
+
+  <!-- Script -->
+  <script src="../js/api.js"></script>
+  <script src="../js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,1030 @@
+{
+  "admin_users": [
+    {
+      "_id": "nlziy8658",
+      "email": "sarahyaseen2056@gmail.com",
+      "password": "$2a$10$3eGg7ncTAfgBbIkKPARsLuABC7UcmPtrfKQ3EomsS0kaLFxd2V5K.",
+      "createdAt": "2026-08-21T10:09:36.429Z",
+      "plainPassword": "sarah1234"
+    },
+    {
+      "_id": "ceop7vvx2",
+      "email": "admin@test.com",
+      "password": "$2a$10$Lf4k62.AEnLoIM0.eguKwuHTIoukIPLvn03hxAzBtw4.9TQN/SJyS",
+      "plainPassword": "admin123",
+      "createdAt": "2026-08-21T10:11:58.967Z"
+    }
+  ],
+  "home_content": {
+    "hero": {
+      "heading": "Hi, I'm Sarah Yaseen",
+      "subheading_phrases": [
+        "WordPress Developer",
+        "UI/UX Designer",
+        "Graphic Designer",
+        "Etsy Product Designer"
+      ],
+      "intro": "A creative digital professional with 3 years of experience building clean, modern, and user-friendly digital experiences — from responsive WordPress websites and intuitive UI/UX designs in Figma, to eye-catching graphic designs and ready-to-edit Etsy templates in Canva.",
+      "cta_primary_label": "View Portfolio",
+      "cta_primary_link": "portfolio/wordpress.html",
+      "cta_secondary_label": "Contact Me",
+      "cta_secondary_link": "#contact",
+      "email": "sarahyaseen2056@gmail.com",
+      "phone": "0335 7423475",
+      "bg_image_url": ""
+    },
+    "about": {
+      "portrait_image_url": "assets/profile.jpg",
+      "content": "I'm Sarah Yaseen, a WordPress Developer and UI/UX Designer with 3 years of experience creating clean, modern, and user-friendly digital experiences for web and mobile. I specialize in designing intuitive interfaces and smooth user journeys in Figma, and building fully responsive WordPress websites using Elementor. I also bring a strong eye for visual design — creating graphics and Etsy-ready templates that are both functional and beautiful. My focus is always on combining aesthetics with usability to deliver effective, engaging design solutions."
+    },
+    "expertise": [
+      {
+        "id": "exp-1",
+        "icon": "fa-brands fa-wordpress",
+        "title": "WordPress Development",
+        "description": "Building responsive, SEO-friendly websites using WordPress & Elementor for businesses across industries.",
+        "link": "portfolio/wordpress.html"
+      },
+      {
+        "id": "exp-2",
+        "icon": "fa-brands fa-figma",
+        "title": "UI/UX Design",
+        "description": "Designing intuitive user interfaces and end-to-end user flows in Figma for web and mobile apps.",
+        "link": "portfolio/ui-ux.html"
+      },
+      {
+        "id": "exp-3",
+        "icon": "fa-solid fa-palette",
+        "title": "Graphic Designing",
+        "description": "Creating scroll-stopping social media ads, banners, and branded visual content.",
+        "link": "portfolio/graphic-design.html"
+      },
+      {
+        "id": "exp-7",
+        "icon": "fa-brands fa-etsy",
+        "title": "Etsy Digital Products",
+        "description": "Designing editable Canva templates (flyers, brochures, social posts) sold as digital products on Etsy.",
+        "link": "portfolio/etsy.html"
+      }
+    ],
+    "stats": [
+      {
+        "id": "stat-1",
+        "number": "3+",
+        "label": "Years Experience"
+      },
+      {
+        "id": "stat-2",
+        "number": "25+",
+        "label": "WordPress Projects"
+      },
+      {
+        "id": "stat-3",
+        "number": "15+",
+        "label": "UI/UX Case Studies"
+      },
+      {
+        "id": "stat-4",
+        "number": "300+",
+        "label": "Etsy Templates"
+      }
+    ],
+    "cta": {
+      "heading": "Let's Work Together",
+      "description": "Always open to new opportunities and collaborations in WordPress development, UI/UX, and design.",
+      "button_label": "Get in Touch",
+      "button_link": "#contact"
+    }
+  },
+  "projects": [
+    {
+      "_id": "wp-1",
+      "category": "wordpress",
+      "title": "German Car Service Website",
+      "description": "<p>I designed and developed this German car service website using WordPress with Elementor, focusing on creating a modern, clean, and user-friendly interface for an automotive service brand. The website includes a well-structured layout, clear service presentation, and smooth navigation to ensure a seamless user experience. Built with Elementor, the design is fully responsive and optimized for all devices, maintaining both functionality and visual appeal.</p>",
+      "images": [
+        "/uploads/upload-1787308679034-655591145.jpg"
+      ],
+      "external_link": "https://auto-wert-direkt.de/",
+      "tags": [
+        "WordPress",
+        "Elementor",
+        "UI/UX Design",
+        "Responsive"
+      ],
+      "status": "published",
+      "order": 1
+    },
+    {
+      "_id": "wp-2",
+      "category": "wordpress",
+      "title": "LLC Business Website Design",
+      "description": "<p>This project involved designing and developing a professional WordPress website for an LLC business using Elementor. The website focuses on a clean, modern layout with a user-friendly interface to clearly present the company's services, brand identity, and contact information. The design is fully responsive and optimized for performance, ensuring a smooth experience across all devices.</p>",
+      "images": [
+        "/uploads/upload-1787567607780-81895277.jpg"
+      ],
+      "external_link": "https://thelimitlessrepairco.com/",
+      "tags": [
+        "WordPress",
+        "Elementor",
+        "Corporate UI",
+        "SEO Friendly"
+      ],
+      "status": "published",
+      "order": 2
+    },
+    {
+      "_id": "wp-3",
+      "category": "wordpress",
+      "title": "Dubai Urgent Visa Website",
+      "description": "<p>This project focused on designing and developing a fast, user-friendly WordPress website for Dubai urgent visa services using Elementor. The website highlights urgent visa options, clear call-to-action sections, and an easy application flow. The design emphasizes trust, clarity, and responsiveness to ensure users can quickly find information and apply across all devices.</p>",
+      "images": [
+        "/uploads/upload-1787567692141-986515546.jpg"
+      ],
+      "external_link": "",
+      "tags": [
+        "WordPress",
+        "Elementor",
+        "Lead Gen",
+        "Fast Loading"
+      ],
+      "status": "published",
+      "order": 3
+    },
+    {
+      "_id": "wp-4",
+      "category": "wordpress",
+      "title": "GCCF – Global Climate Change Foundation Website",
+      "description": "<p>This project involved designing and developing an informative and impact-focused WordPress website for the Global Climate Change Foundation (GCCF) using Elementor. The website was created to effectively communicate the foundation's mission, climate initiatives, and global impact. A clean, modern UI with a strong focus on accessibility, responsiveness, and user experience was implemented to ensure clear storytelling and easy navigation across all devices.</p>",
+      "images": [
+        "/uploads/upload-1787567962577-686744954.jpg"
+      ],
+      "external_link": "",
+      "tags": [
+        "WordPress",
+        "Elementor",
+        "Non-Profit",
+        "Accessibility"
+      ],
+      "status": "published",
+      "order": 4
+    },
+    {
+      "_id": "wp-5",
+      "category": "wordpress",
+      "title": "Limitless Repair Co – Credit Repair Website",
+      "description": "<p>This project involved designing and developing a professional WordPress website for Limitless Repair Co, a credit repair service provider. The website was built using Elementor with a clean, trustworthy, and modern design to clearly explain credit repair services, benefits, and the client process. Special attention was given to UI/UX, clear call-to-action sections, and responsive design.</p>",
+      "images": [
+        "/uploads/upload-1787567985677-729134214.jpg"
+      ],
+      "external_link": "",
+      "tags": [
+        "WordPress",
+        "Elementor",
+        "Credit Repair",
+        "UX Optimization"
+      ],
+      "status": "published",
+      "order": 5
+    },
+    {
+      "_id": "wp-6",
+      "category": "wordpress",
+      "title": "New England Agency – AI Solutions Website",
+      "description": "<p>This project involved designing and developing a modern WordPress website for New England Agency, an AI-focused agency. The website was built using Elementor with a sleek, tech-driven design to showcase AI services, solutions, and innovation. Strong emphasis was placed on UI/UX, clear content structure, and responsive layouts.</p>",
+      "images": [
+        "/uploads/upload-1787567995533-469959206.jpg"
+      ],
+      "external_link": "https://newenglandai-agency.us.stackstaging.com/",
+      "tags": [
+        "WordPress",
+        "Elementor",
+        "AI Tech Site",
+        "Modern UI"
+      ],
+      "status": "published",
+      "order": 6
+    },
+    {
+      "_id": "wp-7",
+      "category": "wordpress",
+      "title": "Own Aim Construction Website",
+      "description": "<p>This project involved designing and developing a professional WordPress website for Own Aim Construction. The website was built using Elementor with a strong, clean, and modern layout to showcase construction services, completed projects, and company expertise. The design focuses on clear structure, trust-building visuals, and full responsiveness.</p>",
+      "images": [
+        "/uploads/upload-1787568048246-811438314.jpg"
+      ],
+      "external_link": "https://ownaimconstructions.com/",
+      "tags": [
+        "WordPress",
+        "Elementor",
+        "Construction Site",
+        "Portfolio Showcase"
+      ],
+      "status": "published",
+      "order": 7
+    },
+    {
+      "_id": "wp-8",
+      "category": "wordpress",
+      "title": "Surplus Recovery – Real Estate Website",
+      "description": "<p>This project involved designing and developing a professional WordPress website for a real estate surplus recovery service. Built using Elementor, the website focuses on a clean, trustworthy, and informative design to explain surplus recovery services, eligibility, and the claim process. Special attention was given to UI/UX, clear call-to-action sections, and responsive design.</p>",
+      "images": [
+        "/uploads/upload-1788023602444-265044486.jpg"
+      ],
+      "external_link": "",
+      "tags": [
+        "WordPress",
+        "Elementor",
+        "Real Estate",
+        "Trust UI"
+      ],
+      "status": "published",
+      "order": 8
+    },
+    {
+      "_id": "ux-1",
+      "category": "ui-ux",
+      "title": "AirLift-Style Ride Booking Web App",
+      "description": "<p>I designed a complete web application interface for an AirLift-style ride booking platform using Figma. This project focuses on creating a smooth end-to-end experience for both commuters and drivers, covering key flows such as authentication, ride booking, payment, booking success, and ride posting.</p>",
+      "images": [
+        "/uploads/upload-1787738683881-347887000.jpg"
+      ],
+      "external_link": "https://www.figma.com/design/GoKLFCEApVUQ1XPrFTiqul/Air-lift-web-design",
+      "tags": [
+        "Figma",
+        "Web App",
+        "Mobile Responsive",
+        "Wireframing"
+      ],
+      "status": "published",
+      "order": 1
+    },
+    {
+      "_id": "ux-2",
+      "category": "ui-ux",
+      "title": "Quick Oil Change Service Finder UI/UX Design",
+      "description": "<p>I designed this Quick Oil Change Service Finder web page in Figma, focusing on a clean layout, easy navigation, and intuitive filters. The design highlights service providers with clear pricing, reviews, and quick booking options to enhance user experience and accessibility.</p>",
+      "images": [
+        "/uploads/upload-1787738746939-603934314.png"
+      ],
+      "external_link": "",
+      "tags": [
+        "Figma",
+        "User Research",
+        "Interactive Prototyping",
+        "Search Filters"
+      ],
+      "status": "published",
+      "order": 2
+    },
+    {
+      "_id": "ux-3",
+      "category": "ui-ux",
+      "title": "First Alert – Fleet Safety & Incident Management Dashboard",
+      "description": "<p>I designed the UI for First Alert, a real-time fleet safety and incident management platform, in Figma. The system allows companies to report incidents, monitor alerts, manage tasks, and track safety performance through a complete dashboard experience including a 6-step reporting wizard, multi-channel alerts, and AI-based risk insights. My focus was to create a modern dark-themed interface with clear data hierarchy, strong usability, and a scalable component-based design system.</p>",
+      "images": [
+        "/uploads/upload-1787738758997-812585302.png"
+      ],
+      "external_link": "https://www.figma.com/design/aqM1u4kEEWhUJGdzeqGqPz/Shipping-management",
+      "tags": [
+        "Figma",
+        "Dashboard UI",
+        "Dark Theme",
+        "SaaS Design System"
+      ],
+      "status": "published",
+      "order": 3
+    },
+    {
+      "_id": "gd-proj-1",
+      "category": "graphic-design",
+      "title": "Apex Cyber Logo & Branding Kit",
+      "description": "Creative branding and visual identity suite designed for a modern cybersecurity agency, featuring customizable templates.",
+      "images": [
+        "/uploads/placeholder-ux-2.svg"
+      ],
+      "external_link": "portfolio/graphic-design.html",
+      "tags": [
+        "Branding",
+        "Logo Kit",
+        "Vector Art"
+      ],
+      "status": "published",
+      "order": 4
+    },
+    {
+      "_id": "smm-proj-1",
+      "category": "social-media",
+      "title": "FitLife Instagram Promo Campaign",
+      "description": "Branded social media ad creatives and promotional banner design templates optimized for high engagement.",
+      "images": [
+        "/uploads/placeholder-ux-1.svg"
+      ],
+      "external_link": "portfolio/graphic-design.html",
+      "tags": [
+        "SMM",
+        "Instagram",
+        "Canva"
+      ],
+      "status": "published",
+      "order": 5
+    },
+    {
+      "_id": "seo-proj-1",
+      "category": "seo-blogging",
+      "title": "Surplus Recovery – Real Estate SEO Blog",
+      "description": "Designed a high-converting SEO blogging template and outline to boost organic reach and search rankings.",
+      "images": [
+        "/uploads/placeholder-wp-8.svg"
+      ],
+      "external_link": "portfolio/wordpress.html",
+      "tags": [
+        "SEO",
+        "Blogging",
+        "Content Strategy"
+      ],
+      "status": "published",
+      "order": 6
+    },
+    {
+      "_id": "video-proj-1",
+      "category": "video-editing",
+      "title": "Real Estate Promotional Video",
+      "description": "Cinematic property tour and promotional video editing for luxury real estate listings, optimized for social media.",
+      "images": [
+        "/uploads/placeholder-wp-5.svg"
+      ],
+      "external_link": "#contact",
+      "tags": [
+        "Video Editing",
+        "Premiere Pro",
+        "Shorts/Reels"
+      ],
+      "status": "published",
+      "order": 7
+    },
+    {
+      "_id": "webdev-proj-1",
+      "category": "web-dev",
+      "title": "AirLift-Style Ride Booking Web App",
+      "description": "Interactive ride booking web application interface and prototype designed in Figma for seamless commuter flow.",
+      "images": [
+        "/uploads/placeholder-ux-1.svg"
+      ],
+      "external_link": "portfolio/ui-ux.html",
+      "tags": [
+        "Web Dev",
+        "Figma",
+        "UI/UX Design"
+      ],
+      "status": "published",
+      "order": 8
+    }
+  ],
+  "gallery_items": [
+    {
+      "_id": "wvigswfvz",
+      "category": "graphic-design",
+      "image": "/uploads/upload-1787739030180-946943607.webp",
+      "caption": "Graphic Designing",
+      "tag": "social-ads",
+      "order": 19
+    },
+    {
+      "_id": "1gcas9ycf",
+      "category": "graphic-design",
+      "image": "/uploads/upload-1787739030184-169645333.webp",
+      "caption": "Corporate Promotion Social Ad",
+      "tag": "social-ads",
+      "order": 20
+    },
+    {
+      "_id": "bsykgcbj8",
+      "category": "graphic-design",
+      "image": "/uploads/upload-1787739030187-726800565.jpg",
+      "caption": "Digital Marketing Campaign Banner",
+      "tag": "social-ads",
+      "order": 21
+    },
+    {
+      "_id": "2wmxayp7b",
+      "category": "graphic-design",
+      "image": "/uploads/upload-1787739030182-439426471.webp",
+      "caption": "E-Commerce Discount Social Grid",
+      "tag": "social-ads",
+      "order": 22
+    },
+    {
+      "_id": "nhsqlrnle",
+      "category": "graphic-design",
+      "image": "/uploads/upload-1787739030195-318841831.jpg",
+      "caption": "Real Estate Facebook Post Design",
+      "tag": "social-ads",
+      "order": 23
+    },
+    {
+      "_id": "f8hcx0qwz",
+      "category": "graphic-design",
+      "image": "/uploads/upload-1787739030386-557584881.webp",
+      "caption": "Apex Cyber Security Campaign",
+      "tag": "social-ads",
+      "order": 24
+    },
+    {
+      "_id": "9iu8bovj9",
+      "category": "graphic-design",
+      "image": "/uploads/upload-1787739030525-919508224.webp",
+      "caption": "Brand Product Promotion Banner",
+      "tag": "social-ads",
+      "order": 29
+    },
+    {
+      "_id": "2mjtst403",
+      "category": "graphic-design",
+      "image": "/uploads/upload-1787739030523-714589997.webp",
+      "caption": "Business Agency Instagram Post",
+      "tag": "social-ads",
+      "order": 31
+    },
+    {
+      "_id": "i5j38gfl6",
+      "category": "graphic-design",
+      "image": "/uploads/upload-1787739030527-611423936.webp",
+      "caption": "Creative Agency Promotion Cover",
+      "tag": "social-ads",
+      "order": 32
+    },
+    {
+      "_id": "kr1dqwxhy",
+      "category": "graphic-design",
+      "image": "/uploads/upload-1787739030530-943369121.png",
+      "caption": "Screenshot 2026 04 18 191412",
+      "tag": "social-ads",
+      "order": 33
+    },
+    {
+      "_id": "mrci5y2yg",
+      "category": "graphic-design",
+      "image": "/uploads/upload-1787739030641-291233625.png",
+      "caption": "Screenshot 2026 04 18 191442",
+      "tag": "social-ads",
+      "order": 34
+    },
+    {
+      "_id": "ku20qsc2",
+      "category": "graphic-design",
+      "image": "/uploads/upload-1787739030650-5042671.png",
+      "caption": "Screenshot 2026 04 18 191626",
+      "tag": "social-ads",
+      "order": 35
+    },
+    {
+      "_id": "68jjkx0tg",
+      "category": "graphic-design",
+      "image": "/uploads/upload-1787739030645-869371429.png",
+      "caption": "Screenshot 2026 04 18 191535",
+      "tag": "social-ads",
+      "order": 36
+    },
+    {
+      "_id": "kqpup0p8q",
+      "category": "graphic-design",
+      "image": "/uploads/upload-1787739030642-282650169.png",
+      "caption": "Screenshot 2026 04 18 191510",
+      "tag": "social-ads",
+      "order": 37
+    },
+    {
+      "_id": "m926pyzr6",
+      "category": "graphic-design",
+      "image": "/uploads/upload-1787739030647-882575357.png",
+      "caption": "Screenshot 2026 04 18 191603",
+      "tag": "social-ads",
+      "order": 38
+    },
+    {
+      "_id": "3jgi5rkeu",
+      "category": "graphic-design",
+      "image": "/uploads/upload-1787739030782-157174145.png",
+      "caption": "Screenshot 2026 04 18 191853",
+      "tag": "social-ads",
+      "order": 39
+    },
+    {
+      "_id": "kqdrfh6dz",
+      "category": "graphic-design",
+      "image": "/uploads/upload-1787739030789-712047179.png",
+      "caption": "Screenshot 2026 04 18 192000",
+      "tag": "social-ads",
+      "order": 40
+    },
+    {
+      "_id": "sl22jpaef",
+      "category": "graphic-design",
+      "image": "/uploads/upload-1787739030792-63074656.png",
+      "caption": "Screenshot 2026 04 18 192017",
+      "tag": "social-ads",
+      "order": 41
+    },
+    {
+      "_id": "gncuccvmw",
+      "category": "graphic-design",
+      "image": "/uploads/upload-1787739030779-947275419.png",
+      "caption": "Screenshot 2026 04 18 191726",
+      "tag": "social-ads",
+      "order": 42
+    },
+    {
+      "_id": "wnk5hy15f",
+      "category": "graphic-design",
+      "image": "/uploads/upload-1787739030787-97981317.png",
+      "caption": "Screenshot 2026 04 18 191935",
+      "tag": "social-ads",
+      "order": 43
+    },
+    {
+      "_id": "u4c7s4qb7",
+      "category": "graphic-design",
+      "image": "/uploads/upload-1787739030924-652920207.png",
+      "caption": "Screenshot 2026 04 18 192035",
+      "tag": "social-ads",
+      "order": 44
+    },
+    {
+      "_id": "g6hkmzuol",
+      "category": "graphic-design",
+      "image": "/uploads/upload-1787739030927-411741812.png",
+      "caption": "Screenshot 2026 04 18 192054",
+      "tag": "social-ads",
+      "order": 45
+    },
+    {
+      "_id": "mrqyb1p0b",
+      "category": "graphic-design",
+      "image": "/uploads/upload-1787739030933-114655949.png",
+      "caption": "Screenshot 2026 04 18 192117",
+      "tag": "social-ads",
+      "order": 46
+    },
+    {
+      "_id": "7l4zhyf2e",
+      "category": "graphic-design",
+      "image": "/uploads/upload-1787739030937-139472050.png",
+      "caption": "Screenshot 2026 04 18 192135",
+      "tag": "social-ads",
+      "order": 47
+    },
+    {
+      "_id": "p5davosn2",
+      "category": "graphic-design",
+      "image": "/uploads/upload-1787739030940-601166317.png",
+      "caption": "Screenshot 2026 04 18 192224",
+      "tag": "social-ads",
+      "order": 48
+    },
+    {
+      "_id": "ssbmn2eao",
+      "category": "graphic-design",
+      "image": "/uploads/upload-1787739031066-972476687.png",
+      "caption": "Screenshot 2026 04 18 192259",
+      "tag": "social-ads",
+      "order": 49
+    },
+    {
+      "_id": "ggi57au6g",
+      "category": "graphic-design",
+      "image": "/uploads/upload-1787739031064-137659775.png",
+      "caption": "Screenshot 2026 04 18 192240",
+      "tag": "social-ads",
+      "order": 50
+    },
+    {
+      "_id": "amdxlctcb",
+      "category": "graphic-design",
+      "image": "/uploads/upload-1787739031122-586331597.png",
+      "caption": "Screenshot 2026 04 18 192333",
+      "tag": "social-ads",
+      "order": 51
+    },
+    {
+      "_id": "1fd67n3pn",
+      "category": "graphic-design",
+      "image": "/uploads/upload-1787739031125-714296179.png",
+      "caption": "Screenshot 2026 04 18 192419",
+      "tag": "social-ads",
+      "order": 52
+    },
+    {
+      "_id": "j5hkw337g",
+      "category": "graphic-design",
+      "image": "/uploads/upload-1787739031124-655709329.png",
+      "caption": "Screenshot 2026 04 18 192351",
+      "tag": "social-ads",
+      "order": 53
+    },
+    {
+      "_id": "3mx4220jk",
+      "category": "graphic-design",
+      "image": "/uploads/upload-1787739031243-336061847.png",
+      "caption": "Screenshot 2026 04 18 192442",
+      "tag": "social-ads",
+      "order": 54
+    },
+    {
+      "_id": "4ved1ynl2",
+      "category": "graphic-design",
+      "image": "/uploads/upload-1787739031246-623290748.png",
+      "caption": "Screenshot 2026 04 18 192456",
+      "tag": "social-ads",
+      "order": 55
+    },
+    {
+      "_id": "r85mmwata",
+      "category": "graphic-design",
+      "image": "/uploads/upload-1787739031310-477083706.png",
+      "caption": "Screenshot 2026 04 18 192530",
+      "tag": "social-ads",
+      "order": 56
+    },
+    {
+      "_id": "k9j2fil4e",
+      "category": "graphic-design",
+      "image": "/uploads/upload-1787739031312-231033452.png",
+      "caption": "Screenshot 2026 04 18 192552",
+      "tag": "social-ads",
+      "order": 57
+    },
+    {
+      "_id": "i3xsskk3q",
+      "category": "graphic-design",
+      "image": "/uploads/upload-1787739031315-352865082.png",
+      "caption": "Screenshot 2026 04 18 192614",
+      "tag": "social-ads",
+      "order": 58
+    },
+    {
+      "_id": "xza2u09fw",
+      "category": "graphic-design",
+      "image": "/uploads/upload-1787739031449-243985021.png",
+      "caption": "Screenshot 2026 04 18 192646",
+      "tag": "social-ads",
+      "order": 59
+    },
+    {
+      "_id": "bc0twu0uz",
+      "category": "graphic-design",
+      "image": "/uploads/upload-1787739031451-35556699.png",
+      "caption": "Screenshot 2026 04 18 192705",
+      "tag": "social-ads",
+      "order": 60
+    },
+    {
+      "_id": "gihwn8y8j",
+      "category": "graphic-design",
+      "image": "/uploads/upload-1787739031514-381961095.png",
+      "caption": "Screenshot 2026 04 18 194703",
+      "tag": "social-ads",
+      "order": 61
+    },
+    {
+      "_id": "iozk8l3e1",
+      "category": "graphic-design",
+      "image": "/uploads/upload-1787739031509-75588485.png",
+      "caption": "Screenshot 2026 04 18 192724",
+      "tag": "social-ads",
+      "order": 62
+    },
+    {
+      "_id": "xj1bdte80",
+      "category": "graphic-design",
+      "image": "/uploads/upload-1787739031511-682565073.png",
+      "caption": "Screenshot 2026 04 18 194637",
+      "tag": "social-ads",
+      "order": 63
+    },
+    {
+      "_id": "p0y199mdv",
+      "category": "graphic-design",
+      "image": "/uploads/upload-1787739031628-288617656.png",
+      "caption": "Screenshot 2026 04 18 194721",
+      "tag": "social-ads",
+      "order": 64
+    },
+    {
+      "_id": "jc2i3cxdp",
+      "category": "etsy",
+      "image": "/uploads/upload-1787904090882-509986760.png",
+      "caption": "Beauty Services",
+      "tag": "Flyer",
+      "order": 2,
+      "title": "Beauty Services",
+      "description": "A stylish beauty services design showcasing professional treatments with a clean, elegant, and inviting look.",
+      "images": [],
+      "price": "",
+      "external_link": ""
+    },
+    {
+      "_id": "9npmfsx44",
+      "category": "etsy",
+      "image": "/uploads/upload-1787904090885-191019417.png",
+      "caption": "Baby Girl Card",
+      "tag": "Flyer",
+      "order": 3,
+      "title": "Baby Girl Card",
+      "description": "A sweet and elegant baby girl card design featuring a soft, charming style perfect for celebrating a little one.",
+      "images": [],
+      "price": "",
+      "external_link": ""
+    },
+    {
+      "_id": "gqdaslkll",
+      "category": "etsy",
+      "image": "/uploads/upload-1787904090879-268215976.png",
+      "caption": "Bridal Celebration Invitation Card",
+      "tag": "Flyer",
+      "order": 1,
+      "title": "Bridal Celebration Invitation Card",
+      "description": "A beautiful and elegant invitation card designed to celebrate a special bridal occasion with style and charm.",
+      "images": [],
+      "price": "",
+      "external_link": ""
+    },
+    {
+      "_id": "p40kk95oz",
+      "category": "etsy",
+      "image": "/uploads/upload-1787904091121-137342548.png",
+      "caption": "Birthday Card",
+      "tag": "Flyer",
+      "order": 4,
+      "title": "Birthday Card",
+      "description": "A cheerful and elegant birthday card design created to make the celebration feel special, joyful, and memorable.\n",
+      "images": [],
+      "price": "",
+      "external_link": ""
+    },
+    {
+      "_id": "r3o15e8xh",
+      "category": "etsy",
+      "image": "/uploads/upload-1787904091119-528405722.png",
+      "caption": "Glam Studio Journal",
+      "tag": "Flyer",
+      "order": 5,
+      "title": "Glam Studio Journal",
+      "description": "A chic and modern journal design created for a glamorous studio aesthetic, combining elegance, creativity, and sophistication.",
+      "images": [],
+      "price": "",
+      "external_link": ""
+    },
+    {
+      "_id": "zr039dp9f",
+      "category": "etsy",
+      "image": "/uploads/upload-1787904091116-688213772.png",
+      "caption": "Luxury Weave Sale",
+      "tag": "Flyer",
+      "order": 6,
+      "title": "Luxury Weave Sale",
+      "description": "A premium promotional design highlighting a luxury weave sale with an elegant, stylish, and eye-catching presentation.",
+      "images": [],
+      "price": "",
+      "external_link": ""
+    },
+    {
+      "_id": "23j5n9h1q",
+      "category": "etsy",
+      "image": "/uploads/upload-1787904091114-569361988.png",
+      "caption": "Baptism Celebration",
+      "tag": "Flyer",
+      "order": 7,
+      "title": "Baptism Celebration",
+      "description": "A graceful and elegant design created to celebrate a meaningful baptism occasion with a warm and timeless feel.\n",
+      "images": [],
+      "price": "",
+      "external_link": ""
+    },
+    {
+      "_id": "sspo4cp48",
+      "category": "etsy",
+      "image": "/uploads/upload-1787904091112-436076962.png",
+      "caption": "Catering Services",
+      "tag": "Flyer",
+      "order": 8,
+      "title": "Catering Services",
+      "description": "A professional and appetizing design promoting catering services with an elegant and inviting presentation.\n",
+      "images": [],
+      "price": "",
+      "external_link": ""
+    },
+    {
+      "_id": "724yg5l7g",
+      "category": "etsy",
+      "image": "/uploads/upload-1787904091217-571110854.png",
+      "caption": "Nail Course",
+      "tag": "Flyer",
+      "order": 9,
+      "title": "Nail Course",
+      "description": "A stylish promotional design for a nail course, highlighting beauty, creativity, and professional nail artistry.\n",
+      "images": [],
+      "price": "",
+      "external_link": ""
+    },
+    {
+      "_id": "4r6crvyci",
+      "category": "etsy",
+      "image": "/uploads/upload-1787904091229-359453593.png",
+      "caption": "Berry Birthday",
+      "tag": "Flyer",
+      "order": 10,
+      "title": "Berry Birthday",
+      "description": "A fun and playful birthday design featuring a sweet berry-inspired theme, perfect for a cheerful celebration.\n",
+      "images": [],
+      "price": "",
+      "external_link": ""
+    },
+    {
+      "_id": "ngecl8hrg",
+      "category": "etsy",
+      "image": "/uploads/upload-1787904091240-148674048.png",
+      "caption": "Propery Flyer",
+      "tag": "Flyer",
+      "order": 11,
+      "title": "Propery Flyer",
+      "description": "A clean and professional property flyer designed to showcase a property’s key features, details, and highlights in an attractive way.\n",
+      "images": [],
+      "price": "",
+      "external_link": ""
+    },
+    {
+      "_id": "tfbj3ve3b",
+      "category": "etsy",
+      "image": "/uploads/upload-1787904091255-684996854.png",
+      "caption": "Lash Experience",
+      "tag": "Flyer",
+      "order": 13,
+      "title": "Lash Experience",
+      "description": "A chic and feminine promotional design showcasing a luxurious lash experience with a polished and elegant beauty aesthetic.\n",
+      "images": [],
+      "price": "",
+      "external_link": ""
+    },
+    {
+      "_id": "i7fkit5bo",
+      "category": "etsy",
+      "image": "/uploads/upload-1787904091251-607307388.png",
+      "caption": "Mother's Day ",
+      "tag": "Flyer",
+      "order": 12,
+      "title": "Mother's Day ",
+      "description": "A warm and elegant design for a Mother’s Day brunch, created to capture the joy of celebrating mothers with a special gathering.\n",
+      "images": [],
+      "price": "",
+      "external_link": ""
+    },
+    {
+      "_id": "0efrprqel",
+      "category": "etsy",
+      "image": "/uploads/upload-1787904091368-201528488.png",
+      "caption": "Fairy Birthday",
+      "tag": "Flyer",
+      "order": 14,
+      "title": "Fairy Birthday",
+      "description": "A magical and whimsical birthday design featuring a charming fairy-inspired theme, perfect for a dreamy celebration.\n",
+      "images": [],
+      "price": "",
+      "external_link": ""
+    },
+    {
+      "_id": "05mu6l3g6",
+      "category": "etsy",
+      "image": "/uploads/upload-1787904091383-323342755.png",
+      "caption": "Teeth Whitening",
+      "tag": "Flyer",
+      "order": 15,
+      "title": "Teeth Whitening",
+      "description": "A clean and professional beauty design promoting teeth whitening services with a fresh, bright, and confident look.\n",
+      "images": [],
+      "price": "",
+      "external_link": ""
+    },
+    {
+      "_id": "nmdevk63o",
+      "category": "etsy",
+      "image": "/uploads/upload-1787904091389-187673100.png",
+      "caption": "Baby Shower",
+      "tag": "Flyer",
+      "order": 16,
+      "title": "Baby Shower",
+      "description": "A charming and elegant baby shower design created to celebrate the arrival of a little one with a warm and joyful feel.\n",
+      "images": [],
+      "price": "",
+      "external_link": ""
+    },
+    {
+      "_id": "qzpuay05h",
+      "category": "etsy",
+      "image": "/uploads/upload-1787904091411-689433253.png",
+      "caption": "Home Care Services",
+      "tag": "Flyer",
+      "order": 17,
+      "title": "Home Care Services",
+      "description": "A clean and professional design promoting reliable home care services with a warm, caring, and trustworthy feel.\n",
+      "images": [],
+      "price": "",
+      "external_link": ""
+    },
+    {
+      "_id": "1j7i7m3j1",
+      "category": "etsy",
+      "image": "/uploads/upload-1787904091414-741670103.png",
+      "caption": "Hair Studio",
+      "tag": "Flyer",
+      "order": 18,
+      "title": "Hair Studio",
+      "description": "A chic and modern design promoting a professional hair studio with an elegant, stylish, and beauty-focused aesthetic.\n",
+      "images": [],
+      "price": "",
+      "external_link": ""
+    },
+    {
+      "_id": "428gmlaz5",
+      "category": "etsy",
+      "image": "/uploads/upload-1787904091580-820123128.png",
+      "caption": "Cleaning Services",
+      "tag": "Flyer",
+      "order": 19,
+      "title": "Cleaning Services",
+      "description": "A clean and professional design promoting reliable cleaning services with a fresh, organized, and trustworthy look.\n",
+      "images": [],
+      "price": "",
+      "external_link": ""
+    },
+    {
+      "_id": "lto6ai29q",
+      "category": "etsy",
+      "image": "/uploads/upload-1787904091578-4308853.png",
+      "caption": "Spring Glam Hair",
+      "tag": "Flyer",
+      "order": 20,
+      "title": "Spring Glam Hair",
+      "description": "A fresh and stylish design promoting spring glam hair services with a vibrant, elegant, and seasonal beauty aesthetic.\n",
+      "images": [],
+      "price": "",
+      "external_link": ""
+    },
+    {
+      "_id": "kkzgjovrs",
+      "category": "etsy",
+      "image": "/uploads/upload-1787904091582-708637952.png",
+      "caption": "15",
+      "tag": "Flyer",
+      "order": 21
+    },
+    {
+      "_id": "7ws4xbmjg",
+      "category": "etsy",
+      "image": "/uploads/upload-1787904091576-774396958.png",
+      "caption": "Mothers Day",
+      "tag": "Flyer",
+      "order": 22,
+      "title": "Mothers Day",
+      "description": "A warm and elegant design celebrating Mother’s Day with a heartfelt, graceful, and memorable feel.\n",
+      "images": [],
+      "price": "",
+      "external_link": ""
+    }
+  ],
+  "page_intros": {
+    "graphic-design": "A collection of social media graphics, product promotion banners, and brand campaign visuals — designed to grab attention and communicate a brand's message clearly and creatively.",
+    "etsy": "A showcase of ready-to-edit Canva templates designed for small businesses and professionals — including  Invitation Cards ,brochures, flyers, and social media kits — available as digital downloads on Etsy."
+  },
+  "contact_messages": [
+    {
+      "_id": "f8um39w9w",
+      "name": "Sarah Yaseen",
+      "email": "sarahyaseen123456@gmail.com",
+      "subject": "etsy",
+      "message": "remote job",
+      "is_read": false,
+      "created_at": "2026-08-29T17:17:08.676Z"
+    }
+  ],
+  "site_settings": {
+    "logo_text": "Sarah",
+    "logo_span": ".Yaseen",
+    "favicon_url": "assets/profile-placeholder.svg",
+    "seo_title": "Sarah Yaseen | WordPress Developer & UI/UX Designer",
+    "seo_description": "Sarah Yaseen's professional web development, UI/UX, graphic design, and Etsy templates portfolio CMS.",
+    "theme_colors": {
+      "bg_primary": "#0A0A0A",
+      "bg_secondary": "#111111",
+      "gold_primary": "#D4AF37",
+      "text_primary": "#F5F5F0"
+    },
+    "font": "Montserrat",
+    "social_links": {
+      "linkedin": "https://www.linkedin.com/in/sarah-yaseen-554056246/",
+      "instagram": "#",
+      "behance": "https://www.behance.net/sarahyaseen2",
+      "etsy": "#"
+    }
+  }
+}
