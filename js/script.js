@@ -23,6 +23,77 @@ document.addEventListener('DOMContentLoaded', async () => {
   }
   logDebugStatus('script.js DOMContentLoaded listener initialized.');
 
+  // Initialize Welcome Popup Immediately
+  (function() {
+    const popupOverlay = document.getElementById('welcome-popup-overlay');
+    const closeBtn = document.getElementById('welcome-popup-close-btn');
+    const ctaBtn = document.getElementById('welcome-popup-cta-btn');
+
+    if (popupOverlay) {
+      // Immediately display popup on page load, no sessionStorage check
+      popupOverlay.classList.add('active');
+      document.body.style.overflow = 'hidden';
+
+      const closePopup = () => {
+        popupOverlay.classList.remove('active');
+        document.body.style.overflow = '';
+      };
+
+      if (closeBtn) closeBtn.addEventListener('click', closePopup);
+      if (ctaBtn) ctaBtn.addEventListener('click', closePopup);
+
+      popupOverlay.addEventListener('click', (e) => {
+        if (e.target === popupOverlay) {
+          closePopup();
+        }
+      });
+    }
+  })();
+
+  // Mobile Hamburger Navigation & Dropdown Toggle
+  (function() {
+    const hamburger = document.getElementById('hamburger-menu');
+    const navMenu = document.getElementById('nav-menu-list');
+    const dropdownToggle = document.querySelector('.dropdown-toggle-btn');
+    const dropdownParent = document.querySelector('.dropdown');
+
+    if (hamburger && navMenu) {
+      hamburger.addEventListener('click', (e) => {
+        e.stopPropagation();
+        hamburger.classList.toggle('active');
+        navMenu.classList.toggle('active');
+      });
+
+      // Close menu when clicking a nav link
+      const navLinks = document.querySelectorAll('.nav-link:not(.dropdown-toggle-btn)');
+      navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          hamburger.classList.remove('active');
+          navMenu.classList.remove('active');
+        });
+      });
+
+      // Close menu when clicking outside
+      document.addEventListener('click', (e) => {
+        if (!navMenu.contains(e.target) && !hamburger.contains(e.target)) {
+          hamburger.classList.remove('active');
+          navMenu.classList.remove('active');
+        }
+      });
+    }
+
+    // Toggle portfolio dropdown on mobile
+    if (dropdownToggle && dropdownParent) {
+      dropdownToggle.addEventListener('click', (e) => {
+        if (window.innerWidth <= 991) {
+          e.preventDefault();
+          e.stopPropagation();
+          dropdownParent.classList.toggle('active');
+        }
+      });
+    }
+  })();
+
   let apiLoaded = false;
   let homeData = null;
   let siteSettings = null;
@@ -1782,39 +1853,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     document.body.appendChild(waBtn);
   }
 
-  // Welcome Popup Logic
-  function initWelcomePopup() {
-    const popupOverlay = document.getElementById('welcome-popup-overlay');
-    const closeBtn = document.getElementById('welcome-popup-close-btn');
-    const ctaBtn = document.getElementById('welcome-popup-cta-btn');
-
-    if (popupOverlay) {
-      // Show only once per browser session for premium UX
-      if (!sessionStorage.getItem('welcome_popup_shown')) {
-        setTimeout(() => {
-          popupOverlay.classList.add('active');
-          document.body.style.overflow = 'hidden'; // Lock background scrolling
-        }, 800); // Elegant 800ms delay after load
-      }
-
-      const closePopup = () => {
-        popupOverlay.classList.remove('active');
-        document.body.style.overflow = ''; // Restore scrolling
-        sessionStorage.setItem('welcome_popup_shown', 'true');
-      };
-
-      if (closeBtn) closeBtn.addEventListener('click', closePopup);
-      if (ctaBtn) ctaBtn.addEventListener('click', closePopup);
-
-      popupOverlay.addEventListener('click', (e) => {
-        if (e.target === popupOverlay) {
-          closePopup();
-        }
-      });
-    }
-  }
-
   // Execute initialization
   await init();
-  initWelcomePopup();
 });
