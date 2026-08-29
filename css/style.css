@@ -2204,3 +2204,121 @@ footer {
   border-bottom-color: var(--border-muted) !important;
 }
 
+/* ================================================================
+   8. WELCOME POPUP STYLES
+   ================================================================ */
+.welcome-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(16, 42, 38, 0.6); /* Transparent Deep Green */
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99999;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.5s;
+}
+
+.welcome-popup-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.welcome-popup-box {
+  background-color: var(--bg-dark); /* Deep Green background */
+  border: 2px solid var(--gold-primary); /* Gold/Beige border */
+  border-radius: 24px;
+  width: 90%;
+  max-width: 480px;
+  padding: 3rem 2rem 2.5rem 2rem;
+  position: relative;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4), 0 0 30px rgba(216, 199, 163, 0.15);
+  text-align: center;
+  transform: scale(0.8) translateY(20px);
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow: hidden;
+}
+
+.welcome-popup-overlay.active .welcome-popup-box {
+  transform: scale(1) translateY(0);
+}
+
+.welcome-popup-close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1.2rem;
+  background: none;
+  border: none;
+  color: var(--gold-primary);
+  font-size: 2rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: var(--transition-fast);
+  opacity: 0.8;
+}
+
+.welcome-popup-close-btn:hover {
+  opacity: 1;
+  transform: scale(1.1);
+  color: var(--text-light);
+}
+
+.welcome-popup-icon-container {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  background-color: rgba(216, 199, 163, 0.1);
+  border: 1px solid var(--gold-primary);
+  border-radius: 50%;
+  margin-bottom: 1.5rem;
+}
+
+.welcome-popup-badge-icon {
+  font-size: 1.5rem;
+  color: var(--gold-primary);
+}
+
+.welcome-popup-heading {
+  font-family: var(--font-family-heading);
+  font-size: 1.8rem;
+  color: var(--gold-primary);
+  margin-bottom: 1rem;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.welcome-popup-text {
+  font-family: var(--font-family-body);
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.welcome-popup-cta {
+  width: 100%;
+  padding: 0.9rem 2rem;
+  font-weight: 700;
+  font-size: 0.95rem;
+  border-radius: 12px;
+  background-color: var(--gold-primary);
+  color: var(--bg-dark);
+  border: 1px solid var(--gold-primary);
+  box-shadow: 0 4px 15px rgba(216, 199, 163, 0.2);
+}
+
+.welcome-popup-cta:hover {
+  background-color: var(--gold-hover);
+  color: var(--bg-dark);
+  border-color: var(--gold-hover);
+  box-shadow: 0 6px 20px rgba(216, 199, 163, 0.35);
+}
+

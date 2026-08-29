@@ -1782,6 +1782,39 @@ document.addEventListener('DOMContentLoaded', async () => {
     document.body.appendChild(waBtn);
   }
 
+  // Welcome Popup Logic
+  function initWelcomePopup() {
+    const popupOverlay = document.getElementById('welcome-popup-overlay');
+    const closeBtn = document.getElementById('welcome-popup-close-btn');
+    const ctaBtn = document.getElementById('welcome-popup-cta-btn');
+
+    if (popupOverlay) {
+      // Show only once per browser session for premium UX
+      if (!sessionStorage.getItem('welcome_popup_shown')) {
+        setTimeout(() => {
+          popupOverlay.classList.add('active');
+          document.body.style.overflow = 'hidden'; // Lock background scrolling
+        }, 800); // Elegant 800ms delay after load
+      }
+
+      const closePopup = () => {
+        popupOverlay.classList.remove('active');
+        document.body.style.overflow = ''; // Restore scrolling
+        sessionStorage.setItem('welcome_popup_shown', 'true');
+      };
+
+      if (closeBtn) closeBtn.addEventListener('click', closePopup);
+      if (ctaBtn) ctaBtn.addEventListener('click', closePopup);
+
+      popupOverlay.addEventListener('click', (e) => {
+        if (e.target === popupOverlay) {
+          closePopup();
+        }
+      });
+    }
+  }
+
   // Execute initialization
   await init();
+  initWelcomePopup();
 });
