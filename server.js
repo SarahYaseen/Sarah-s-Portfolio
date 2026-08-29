@@ -556,3 +556,5 @@ app.listen(PORT, () => {
   console.log(`ADMIN PORTAL RUNNING AT http://localhost:${PORT}/admin`);
   console.log(`====================================================`);
 });
+
+module.exports = app;
