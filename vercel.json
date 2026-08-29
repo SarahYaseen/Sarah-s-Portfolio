@@ -5,6 +5,42 @@
     {
       "src": "server.js",
       "use": "@vercel/node"
+    },
+    {
+      "src": "index.html",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "about.html",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "contact.html",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "css/**",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "js/**",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "assets/**",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "uploads/**",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "portfolio/**",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "admin/**",
+      "use": "@vercel/static"
     }
   ],
   "routes": [
