@@ -27,7 +27,7 @@ const loginLimiter = rateLimit({
 });
 
 // Configure upload directory
-const UPLOADS_DIR = path.join(__dirname, 'uploads');
+const UPLOADS_DIR = path.join(process.cwd(), 'uploads');
 if (!fs.existsSync(UPLOADS_DIR)) {
   fs.mkdirSync(UPLOADS_DIR, { recursive: true });
 }
@@ -36,7 +36,7 @@ if (!fs.existsSync(UPLOADS_DIR)) {
 app.use('/uploads', express.static(UPLOADS_DIR));
 
 // Serve main public static files
-app.use(express.static(__dirname, { extensions: ['html'] }));
+app.use(express.static(process.cwd(), { extensions: ['html'] }));
 
 // Multer Storage Configuration
 const storage = multer.diskStorage({
@@ -506,33 +506,33 @@ app.post('/api/upload', authenticateToken, upload.single('file'), (req, res) => 
 
 // Explicit clean routes for pages
 app.get('/about', (req, res) => {
-  res.sendFile(path.join(__dirname, 'about.html'));
+  res.sendFile(path.join(process.cwd(), 'about.html'));
 });
 
 app.get('/contact', (req, res) => {
-  res.sendFile(path.join(__dirname, 'contact.html'));
+  res.sendFile(path.join(process.cwd(), 'contact.html'));
 });
 
 app.get('/portfolio/project', (req, res) => {
-  res.sendFile(path.join(__dirname, 'portfolio', 'project.html'));
+  res.sendFile(path.join(process.cwd(), 'portfolio', 'project.html'));
 });
 
 app.get('/portfolio/service', (req, res) => {
-  res.sendFile(path.join(__dirname, 'portfolio', 'service.html'));
+  res.sendFile(path.join(process.cwd(), 'portfolio', 'service.html'));
 });
 
 app.get('/portfolio/skill', (req, res) => {
-  res.sendFile(path.join(__dirname, 'portfolio', 'skill.html'));
+  res.sendFile(path.join(process.cwd(), 'portfolio', 'skill.html'));
 });
 
 // Serve admin client at /admin route
 app.get('/admin', (req, res) => {
-  res.sendFile(path.join(__dirname, 'admin', 'index.html'));
+  res.sendFile(path.join(process.cwd(), 'admin', 'index.html'));
 });
 
 // Wildcard route to handle client-side routing on page refresh within admin routes
 app.get('/admin/*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'admin', 'index.html'));
+  res.sendFile(path.join(process.cwd(), 'admin', 'index.html'));
 });
 
 // Global Error Handler for Upload Limits or Multer Failures
