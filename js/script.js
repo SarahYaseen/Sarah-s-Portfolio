@@ -50,49 +50,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
   })();
 
-  // Mobile Hamburger Navigation & Dropdown Toggle
-  (function() {
-    const hamburger = document.getElementById('hamburger-menu');
-    const navMenu = document.getElementById('nav-menu-list');
-    const dropdownToggle = document.querySelector('.dropdown-toggle-btn');
-    const dropdownParent = document.querySelector('.dropdown');
 
-    if (hamburger && navMenu) {
-      hamburger.addEventListener('click', (e) => {
-        e.stopPropagation();
-        hamburger.classList.toggle('active');
-        navMenu.classList.toggle('active');
-      });
-
-      // Close menu when clicking a nav link
-      const navLinks = document.querySelectorAll('.nav-link:not(.dropdown-toggle-btn)');
-      navLinks.forEach(link => {
-        link.addEventListener('click', () => {
-          hamburger.classList.remove('active');
-          navMenu.classList.remove('active');
-        });
-      });
-
-      // Close menu when clicking outside
-      document.addEventListener('click', (e) => {
-        if (!navMenu.contains(e.target) && !hamburger.contains(e.target)) {
-          hamburger.classList.remove('active');
-          navMenu.classList.remove('active');
-        }
-      });
-    }
-
-    // Toggle portfolio dropdown on mobile
-    if (dropdownToggle && dropdownParent) {
-      dropdownToggle.addEventListener('click', (e) => {
-        if (window.innerWidth <= 991) {
-          e.preventDefault();
-          e.stopPropagation();
-          dropdownParent.classList.toggle('active');
-        }
-      });
-    }
-  })();
 
   let apiLoaded = false;
   let homeData = null;

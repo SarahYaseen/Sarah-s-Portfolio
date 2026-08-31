@@ -45,6 +45,9 @@
   ],
   "routes": [
     {
+      "handle": "filesystem"
+    },
+    {
       "src": "/api/(.*)",
       "dest": "server.js"
     },
@@ -55,9 +58,6 @@
     {
       "src": "/admin/(.*)",
       "dest": "admin/index.html"
-    },
-    {
-      "handle": "filesystem"
     },
     {
       "src": "/(.*)",

@@ -444,93 +444,7 @@ header.scrolled .header-bottom {
   to { transform: translateY(0); }
 }
 
-/* Mobile Responsive Header */
-@media (max-width: 991px) {
-  header {
-    background-color: var(--bg-primary);
-  }
-  
-  .header-bottom {
-    padding: 20px 0;
-    background-color: var(--bg-primary);
-  }
-  
-  .hamburger {
-    display: block;
-  }
-  
-  .nav-menu {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background-color: var(--bg-secondary);
-    border-top: 1px solid var(--border-color);
-    display: none;
-    flex-direction: column;
-    align-items: stretch;
-    height: auto;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-  }
-  
-  .nav-menu.active {
-    display: flex;
-  }
-  
-  .nav-menu > ul {
-    flex-direction: column;
-    align-items: stretch;
-    width: 100%;
-  }
-  
-  .nav-menu > ul > li {
-    width: 100%;
-    border-bottom: 1px solid var(--border-color);
-    flex-direction: column;
-    align-items: flex-start;
-    height: auto;
-  }
-  
-  .nav-link {
-    width: 100%;
-    padding: 15px 20px;
-    height: auto;
-  }
-  
-  .dropdown-menu {
-    position: static;
-    opacity: 1;
-    visibility: visible;
-    transform: none;
-    width: 100%;
-    display: none;
-    border: none;
-    background-color: var(--bg-tertiary);
-    box-shadow: none;
-  }
-  
-  .dropdown.active .dropdown-menu {
-    display: block;
-  }
-  
-  .dropdown-item a {
-    padding: 12px 35px;
-  }
-  
-  .header-action-btn {
-    display: none;
-  }
-  
-  .hamburger.active .bar:nth-child(1) {
-    transform: translateY(7px) rotate(45deg);
-  }
-  .hamburger.active .bar:nth-child(2) {
-    opacity: 0;
-  }
-  .hamburger.active .bar:nth-child(3) {
-    transform: translateY(-7px) rotate(-45deg);
-  }
-}
+
 
 /* 5. Buttons (Pill shaped Neon Lime) */
 .btn {
@@ -2337,22 +2251,49 @@ html, body {
 /* Mobile Header & Hamburger Menu Styling */
 @media (max-width: 991px) {
   #dynamic-header {
-    background-color: var(--bg-dark) !important;
-    position: fixed !important;
+    background-color: var(--bg-dark);
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     border-bottom: 1px solid var(--border-color);
+    z-index: 1050 !important;
   }
   
   .header-bottom {
-    background-color: var(--bg-dark) !important;
-    padding: 15px 0 !important;
+    background-color: var(--bg-dark);
+    padding: 12px 0;
   }
 
-  /* Hamburger Bars visibility on dark theme */
+  .header-bottom .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap; /* Prevent items from wrapping to a second line */
+  }
+
+  .logo a {
+    white-space: nowrap;
+    display: inline-block;
+  }
+
+  /* Hamburger Menu Button */
+  .hamburger {
+    display: block !important;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 14px 10px; /* Touch target dimensions: 45px width x 44px height */
+    z-index: 1010;
+  }
+
   .hamburger .bar {
-    background-color: var(--gold-primary) !important;
+    display: block;
+    width: 25px;
+    height: 2px;
+    margin: 5px 0;
+    background-color: var(--gold-primary);
+    transition: var(--transition-fast);
   }
   
   .hamburger.active .bar:nth-child(1) {
@@ -2365,61 +2306,122 @@ html, body {
     transform: translateY(-7px) rotate(-45deg);
   }
 
+  .header-action-btn {
+    display: none;
+  }
+
   /* Navigation Drawer styling on Mobile */
   .nav-menu {
-    position: absolute !important;
-    top: 100% !important;
-    left: 0 !important;
-    width: 100% !important;
-    background-color: var(--bg-dark-secondary) !important;
-    border-top: 1px solid var(--gold-primary) !important;
-    border-bottom: 1px solid var(--gold-primary) !important;
-    padding: 10px 0 !important;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5) !important;
-    transition: var(--transition-smooth) !important;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
+                opacity 0.4s ease, 
+                transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
+                visibility 0.4s;
+    background-color: var(--bg-dark-secondary);
+    border-top: 1px solid var(--gold-primary);
+    border-bottom: 1px solid var(--gold-primary);
+    padding: 0;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    height: auto;
+    z-index: 1005;
   }
   
   .nav-menu.active {
-    display: flex !important;
+    max-height: calc(100vh - 68px); /* Prevent cutting off on short screens */
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    padding: 10px 0;
+    overflow-y: auto;
   }
 
   .nav-menu > ul {
-    width: 100% !important;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
   }
 
   .nav-menu > ul > li {
-    border-bottom: 1px solid rgba(216, 199, 163, 0.1) !important;
+    width: 100%;
+    border-bottom: 1px solid rgba(216, 199, 163, 0.1);
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
   }
 
   .nav-menu > ul > li:last-child {
-    border-bottom: none !important;
+    border-bottom: none;
   }
 
   .nav-link {
-    color: var(--text-light) !important;
-    padding: 15px 25px !important;
-    font-size: 15px !important;
-    display: block !important;
-    width: 100% !important;
+    color: var(--text-light);
+    padding: 15px 25px;
+    font-size: 15px;
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .nav-link.active,
+  .nav-link:hover {
+    color: var(--gold-primary);
   }
 
   /* Dropdown portfolio sub-menu */
   .dropdown-menu {
-    background-color: #081412 !important;
-    border-top: 2px solid var(--gold-primary) !important;
-    width: 100% !important;
-    padding-left: 15px !important;
+    position: static;
+    display: none;
+    width: 100%;
+    background-color: #081412;
+    border: none;
+    border-top: 1px solid rgba(216, 199, 163, 0.2);
+    box-shadow: none;
+    padding-left: 15px;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+  }
+  
+  .dropdown.active .dropdown-menu {
+    display: block;
+  }
+
+  .dropdown-item {
+    border-bottom: 1px solid rgba(216, 199, 163, 0.05);
+  }
+
+  .dropdown-item:last-child {
+    border-bottom: none;
   }
   
   .dropdown-item a {
-    color: rgba(255, 255, 255, 0.8) !important;
-    padding: 12px 25px !important;
-    font-size: 14px !important;
+    color: rgba(255, 255, 255, 0.8);
+    padding: 12px 25px;
+    font-size: 14px;
+    display: block;
   }
 
   .dropdown-item a:hover {
-    color: var(--bg-dark) !important;
-    background-color: var(--gold-primary) !important;
+    color: var(--bg-dark);
+    background-color: var(--gold-primary);
+  }
+
+  /* Sub-pages Header Spacing Adjustments */
+  .portfolio-header {
+    padding-top: 120px;
+    padding-bottom: 60px;
   }
 }
 
@@ -2472,4 +2474,44 @@ html, body {
     padding: 25px !important;
   }
 }
+
+/* --- Additional Responsiveness Fixes for Contact / Menu --- */
+@media (max-width: 991px) {
+  .contact-card {
+    padding: 20px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Stack contact cards vertically on small mobile screens */
+  .contact-card {
+    flex-direction: column !important;
+    text-align: center !important;
+    align-items: center !important;
+    padding: 24px 16px !important;
+    gap: 15px !important;
+  }
+
+  .contact-text-box {
+    text-align: center !important;
+    width: 100% !important;
+  }
+
+  /* Reduce form panel padding to maximize screen width usage */
+  .contact-form-panel {
+    padding: 24px 20px !important;
+  }
+}
+
+/* Global contact text wrapping safety rules to prevent layout breakout */
+.contact-card p,
+.contact-card a,
+.contact-text-box p,
+.contact-text-box a,
+.contact-details p {
+  word-break: break-all !important;
+  overflow-wrap: break-word !important;
+  white-space: normal !important;
+}
+
 
