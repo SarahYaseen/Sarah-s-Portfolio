@@ -456,7 +456,7 @@ app.get('/api/messages', authenticateToken, (req, res) => {
   res.json(messages);
 });
 
-app.post('/api/messages', (req, res) => {
+app.post('/api/messages', async (req, res) => {
   const { name, email, subject, message } = req.body;
   if (!name || !email || !subject || !message) {
     return res.status(400).json({ error: 'All fields are required.' });
@@ -486,20 +486,16 @@ app.post('/api/messages', (req, res) => {
 
   // Dispatch email notification
   if (process.env.SMTP_USER && process.env.SMTP_PASS) {
-    mailTransporter.sendMail(mailOptions, (error, info) => {
-      if (error) {
-        console.error('Error sending message email:', error);
-      } else {
-        console.log('Message email sent successfully:', info.response);
-      }
-    });
+    try {
+      const info = await mailTransporter.sendMail(mailOptions);
+      console.log('Message email sent successfully:', info.response);
+    } catch (error) {
+      console.error('Error sending message email:', error);
+    }
   } else {
     console.warn('SMTP_USER/SMTP_PASS not configured. Generating testing Ethereal SMTP account...');
-    nodemailer.createTestAccount((err, account) => {
-      if (err) {
-        console.error('Failed to create testing SMTP account:', err);
-        return;
-      }
+    try {
+      const account = await nodemailer.createTestAccount();
       const testTransporter = nodemailer.createTransport({
         host: account.smtp.host,
         port: account.smtp.port,
@@ -509,15 +505,12 @@ app.post('/api/messages', (req, res) => {
           pass: account.pass
         }
       });
-      testTransporter.sendMail(mailOptions, (error, info) => {
-        if (error) {
-          console.error('Error sending test email:', error);
-        } else {
-          console.log('Test Email sent successfully!');
-          console.log('Preview URL:', nodemailer.getTestMessageUrl(info));
-        }
-      });
-    });
+      const info = await testTransporter.sendMail(mailOptions);
+      console.log('Test Email sent successfully!');
+      console.log('Preview URL:', nodemailer.getTestMessageUrl(info));
+    } catch (err) {
+      console.error('Failed to send test email via Ethereal:', err);
+    }
   }
 
   res.json({ success: true, message: 'Message sent successfully!', data: newMessage });
