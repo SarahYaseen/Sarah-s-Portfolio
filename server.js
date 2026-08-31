@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const path = require('path');
 const fs = require('fs');
@@ -7,6 +8,18 @@ const multer = require('multer');
 const cors = require('cors');
 const rateLimit = require('express-rate-limit');
 const db = require('./db/database');
+const nodemailer = require('nodemailer');
+
+// Configure nodemailer SMTP transporter
+const mailTransporter = nodemailer.createTransport({
+  host: process.env.SMTP_HOST || 'smtp.gmail.com',
+  port: parseInt(process.env.SMTP_PORT || '587'),
+  secure: process.env.SMTP_SECURE === 'true',
+  auth: {
+    user: process.env.SMTP_USER,
+    pass: process.env.SMTP_PASS
+  }
+});
 
 const app = express();
 const PORT = process.env.PORT || 8080;
@@ -457,6 +470,55 @@ app.post('/api/messages', (req, res) => {
     is_read: false,
     created_at: new Date().toISOString()
   });
+
+  // Prepare email content
+  const mailOptions = {
+    from: `"${name}" <${process.env.SMTP_USER || 'noreply@sarahportfolio.com'}>`,
+    to: 'sarahyaseen123456@gmail.com',
+    replyTo: email,
+    subject: `New Portfolio Message: ${subject}`,
+    text: `You have received a new contact submission from your portfolio website.\n\n` +
+          `Name: ${name}\n` +
+          `Email: ${email}\n` +
+          `Subject: ${subject}\n\n` +
+          `Message:\n${message}\n`
+  };
+
+  // Dispatch email notification
+  if (process.env.SMTP_USER && process.env.SMTP_PASS) {
+    mailTransporter.sendMail(mailOptions, (error, info) => {
+      if (error) {
+        console.error('Error sending message email:', error);
+      } else {
+        console.log('Message email sent successfully:', info.response);
+      }
+    });
+  } else {
+    console.warn('SMTP_USER/SMTP_PASS not configured. Generating testing Ethereal SMTP account...');
+    nodemailer.createTestAccount((err, account) => {
+      if (err) {
+        console.error('Failed to create testing SMTP account:', err);
+        return;
+      }
+      const testTransporter = nodemailer.createTransport({
+        host: account.smtp.host,
+        port: account.smtp.port,
+        secure: account.smtp.secure,
+        auth: {
+          user: account.user,
+          pass: account.pass
+        }
+      });
+      testTransporter.sendMail(mailOptions, (error, info) => {
+        if (error) {
+          console.error('Error sending test email:', error);
+        } else {
+          console.log('Test Email sent successfully!');
+          console.log('Preview URL:', nodemailer.getTestMessageUrl(info));
+        }
+      });
+    });
+  }
 
   res.json({ success: true, message: 'Message sent successfully!', data: newMessage });
 });
