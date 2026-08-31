@@ -3,14 +3,14 @@
     {
       "_id": "nlziy8658",
       "email": "sarahyaseen123456@gmail.com",
-      "password": "$2a$10$u1bvcYFRkz6i7wV1f88lsumU3xkKcT9RORfsHFhQ8OIrDfWgP7XaS",
+      "password": "$2a$10$ZE1QJBQTMZAEntvmf2mOYenyrLoxsp70lpwkojvJWpSOeEknjKqS.",
       "createdAt": "2026-08-21T10:09:36.429Z",
       "plainPassword": "sara1122"
     },
     {
       "_id": "ceop7vvx2",
       "email": "admin@test.com",
-      "password": "$2a$10$YgCAgNWA4Rx76yabIiEwEOy5cmtZx4tCBKhFYakMVu7Zo0uqxuHe.",
+      "password": "$2a$10$yzTcr6wYZA7bHQlcZcyiFuDZGscfldK2KzJGUJtgXsAH6amXkIFJ.",
       "plainPassword": "admin123",
       "createdAt": "2026-08-21T10:11:58.967Z"
     }
@@ -1005,6 +1005,15 @@
       "message": "remote job",
       "is_read": false,
       "created_at": "2026-08-29T17:17:08.676Z"
+    },
+    {
+      "_id": "bnenqsz5l",
+      "name": "Jane Doe Test",
+      "email": "jane@test.com",
+      "subject": "Collab Offer",
+      "message": "Hi Sarah, I would love to collab with you on a WordPress project!",
+      "is_read": false,
+      "created_at": "2026-08-31T09:38:35.434Z"
     }
   ],
   "site_settings": {

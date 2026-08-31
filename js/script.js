@@ -829,20 +829,41 @@ document.addEventListener('DOMContentLoaded', async () => {
         return;
       }
 
+      const submitBtn = contactForm.querySelector('button[type="submit"]');
+      const originalBtnHTML = submitBtn ? submitBtn.innerHTML : 'Send Message';
+
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<i class="fa-solid fa-circle-notch fa-spin" style="margin-right: 8px;"></i> Sending...';
+      }
+
       formStatus.textContent = "Sending your message...";
       formStatus.className = "form-status success";
       formStatus.style.color = "var(--gold-primary)";
 
-      const result = await window.PortfolioAPI.submitMessage({ name, email, subject, message });
-      
-      if (result && result.success) {
-        formStatus.textContent = "Thank you! Your message has been sent successfully. I will get back to you shortly.";
-        formStatus.className = "form-status success";
-        formStatus.style.color = "#2ec4b6";
-        contactForm.reset();
-      } else {
-        formStatus.textContent = "There was an error sending your message. Please try again.";
+      try {
+        const result = await window.PortfolioAPI.submitMessage({ name, email, subject, message });
+        
+        if (result && result.success) {
+          formStatus.textContent = "Thank you! Your message has been sent successfully. I will get back to you shortly.";
+          formStatus.className = "form-status success";
+          formStatus.style.color = "#2ec4b6";
+          contactForm.reset();
+        } else {
+          const errMsg = result && result.error ? `Error: ${result.error}` : "There was an error sending your message. Please try again.";
+          formStatus.textContent = errMsg;
+          formStatus.className = "form-status error";
+          formStatus.style.color = "#ff4d4d";
+        }
+      } catch (err) {
+        formStatus.textContent = "Connection failed. Please check your internet and try again.";
         formStatus.className = "form-status error";
+        formStatus.style.color = "#ff4d4d";
+      } finally {
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = originalBtnHTML;
+        }
       }
     });
   }

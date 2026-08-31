@@ -200,13 +200,13 @@ const PortfolioAPI = {
         body: JSON.stringify(data)
       });
       if (!response.ok) {
-        throw new Error('Server submit error');
+        const errData = await response.json().catch(() => ({}));
+        throw new Error(errData.error || 'Server submit error');
       }
       return await response.json();
     } catch (err) {
-      console.warn("API Submit error, executing local fallback simulation.", err);
-      // Simulate client success
-      return new Promise(resolve => setTimeout(() => resolve({ success: true }), 1000));
+      console.error("API Submit error:", err);
+      return { success: false, error: err.message };
     }
   }
 };
