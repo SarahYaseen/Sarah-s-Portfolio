@@ -2263,6 +2263,7 @@ html, body {
   .header-bottom {
     background-color: var(--bg-dark);
     padding: 12px 0;
+    position: relative;
   }
 
   .header-bottom .container {
@@ -2285,6 +2286,8 @@ html, body {
     cursor: pointer;
     padding: 14px 10px; /* Touch target dimensions: 45px width x 44px height */
     z-index: 1010;
+    position: relative;
+    flex-shrink: 0;
   }
 
   .hamburger .bar {

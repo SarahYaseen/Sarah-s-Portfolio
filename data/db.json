@@ -3,14 +3,14 @@
     {
       "_id": "nlziy8658",
       "email": "sarahyaseen123456@gmail.com",
-      "password": "$2a$10$u7YXEIwp56ygv2o/51bauu5FVJhzLAl0nHjFYIsgy/9ShHZ7K6Bki",
+      "password": "$2a$10$cJ5R746z0wrlmQ39nKOwhutuoIDFJ4MHsAEqu7QdnoeEmiuk1x1Ai",
       "createdAt": "2026-08-21T10:09:36.429Z",
       "plainPassword": "sara1122"
     },
     {
       "_id": "ceop7vvx2",
       "email": "admin@test.com",
-      "password": "$2a$10$1FkspFvDP489sC2SxZPdZukddfvRxSNxE63qZQXxNkNjO.j9qd1/C",
+      "password": "$2a$10$vecVm0rVhuaDcwuoBAmxP.5AZPzB9JfbhnuMbHB0e8RVssQb6526m",
       "plainPassword": "admin123",
       "createdAt": "2026-08-21T10:11:58.967Z"
     }
