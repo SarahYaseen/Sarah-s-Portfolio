@@ -3,14 +3,14 @@
     {
       "_id": "nlziy8658",
       "email": "sarahyaseen123456@gmail.com",
-      "password": "$2a$10$nypNWZf.7vUBOFsVawVsheppEpN8mkP/SJQ.3rHZf.1XfD3O0PwPO",
+      "password": "$2a$10$u7YXEIwp56ygv2o/51bauu5FVJhzLAl0nHjFYIsgy/9ShHZ7K6Bki",
       "createdAt": "2026-08-21T10:09:36.429Z",
       "plainPassword": "sara1122"
     },
     {
       "_id": "ceop7vvx2",
       "email": "admin@test.com",
-      "password": "$2a$10$INqEx.roUs9mRyPefuOOB.XWib/vCvLze2FON7qiVPL04sVN0bPFK",
+      "password": "$2a$10$1FkspFvDP489sC2SxZPdZukddfvRxSNxE63qZQXxNkNjO.j9qd1/C",
       "plainPassword": "admin123",
       "createdAt": "2026-08-21T10:11:58.967Z"
     }
@@ -1035,6 +1035,9 @@
     }
   ],
   "site_settings": {
+    "contact_recipient_email": "sarahyaseen123456@gmail.com",
+    "contact_email_enabled": true,
+    "contact_db_enabled": true,
     "logo_text": "Sarah",
     "logo_span": ".Yaseen",
     "favicon_url": "assets/profile-placeholder.svg",

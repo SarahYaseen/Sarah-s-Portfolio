@@ -462,54 +462,65 @@ app.post('/api/messages', async (req, res) => {
     return res.status(400).json({ error: 'All fields are required.' });
   }
 
-  const newMessage = db.insertOne('contact_messages', {
-    name: name.trim(),
-    email: email.trim(),
-    subject: subject.trim(),
-    message: message.trim(),
-    is_read: false,
-    created_at: new Date().toISOString()
-  });
+  // Load Contact Form settings dynamically
+  const settings = db.findOne('site_settings') || {};
+  const recipientEmail = settings.contact_recipient_email || 'sarahyaseen123456@gmail.com';
+  const emailEnabled = settings.contact_email_enabled !== false;
+  const dbEnabled = settings.contact_db_enabled !== false;
 
-  // Prepare email content
-  const mailOptions = {
-    from: `"${name}" <${process.env.SMTP_USER || 'noreply@sarahportfolio.com'}>`,
-    to: 'sarahyaseen123456@gmail.com',
-    replyTo: email,
-    subject: `New Portfolio Message: ${subject}`,
-    text: `You have received a new contact submission from your portfolio website.\n\n` +
-          `Name: ${name}\n` +
-          `Email: ${email}\n` +
-          `Subject: ${subject}\n\n` +
-          `Message:\n${message}\n`
-  };
+  let newMessage = null;
+  if (dbEnabled) {
+    newMessage = db.insertOne('contact_messages', {
+      name: name.trim(),
+      email: email.trim(),
+      subject: subject.trim(),
+      message: message.trim(),
+      is_read: false,
+      created_at: new Date().toISOString()
+    });
+  }
 
-  // Dispatch email notification
-  if (process.env.SMTP_USER && process.env.SMTP_PASS) {
-    try {
-      const info = await mailTransporter.sendMail(mailOptions);
-      console.log('Message email sent successfully:', info.response);
-    } catch (error) {
-      console.error('Error sending message email:', error);
-    }
-  } else {
-    console.warn('SMTP_USER/SMTP_PASS not configured. Generating testing Ethereal SMTP account...');
-    try {
-      const account = await nodemailer.createTestAccount();
-      const testTransporter = nodemailer.createTransport({
-        host: account.smtp.host,
-        port: account.smtp.port,
-        secure: account.smtp.secure,
-        auth: {
-          user: account.user,
-          pass: account.pass
-        }
-      });
-      const info = await testTransporter.sendMail(mailOptions);
-      console.log('Test Email sent successfully!');
-      console.log('Preview URL:', nodemailer.getTestMessageUrl(info));
-    } catch (err) {
-      console.error('Failed to send test email via Ethereal:', err);
+  if (emailEnabled) {
+    // Prepare email content
+    const mailOptions = {
+      from: `"${name}" <${process.env.SMTP_USER || 'noreply@sarahportfolio.com'}>`,
+      to: recipientEmail,
+      replyTo: email,
+      subject: `New Portfolio Message: ${subject}`,
+      text: `You have received a new contact submission from your portfolio website.\n\n` +
+            `Name: ${name}\n` +
+            `Email: ${email}\n` +
+            `Subject: ${subject}\n\n` +
+            `Message:\n${message}\n`
+    };
+
+    // Dispatch email notification
+    if (process.env.SMTP_USER && process.env.SMTP_PASS) {
+      try {
+        const info = await mailTransporter.sendMail(mailOptions);
+        console.log('Message email sent successfully:', info.response);
+      } catch (error) {
+        console.error('Error sending message email:', error);
+      }
+    } else {
+      console.warn('SMTP_USER/SMTP_PASS not configured. Generating testing Ethereal SMTP account...');
+      try {
+        const account = await nodemailer.createTestAccount();
+        const testTransporter = nodemailer.createTransport({
+          host: account.smtp.host,
+          port: account.smtp.port,
+          secure: account.smtp.secure,
+          auth: {
+            user: account.user,
+            pass: account.pass
+          }
+        });
+        const info = await testTransporter.sendMail(mailOptions);
+        console.log('Test Email sent successfully!');
+        console.log('Preview URL:', nodemailer.getTestMessageUrl(info));
+      } catch (err) {
+        console.error('Failed to send test email via Ethereal:', err);
+      }
     }
   }
 

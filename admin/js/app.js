@@ -2210,6 +2210,125 @@ function SettingsManager({ showToast }) {
       </div>
     </form>
   );
+// --- SUB-PANEL: CONTACT FORM SETTINGS MANAGER ---
+function ContactSettingsManager({ showToast }) {
+  const [settings, setSettings] = useState({
+    contact_recipient_email: '',
+    contact_email_enabled: true,
+    contact_db_enabled: true
+  });
+  const [loading, setLoading] = useState(true);
+  const [saving, setSaving] = useState(false);
+
+  useEffect(() => {
+    fetchSettings();
+  }, []);
+
+  const fetchSettings = async () => {
+    try {
+      const res = await AdminAPI.getSettings();
+      setSettings({
+        contact_recipient_email: res.contact_recipient_email || 'sarahyaseen123456@gmail.com',
+        contact_email_enabled: res.contact_email_enabled !== false,
+        contact_db_enabled: res.contact_db_enabled !== false
+      });
+    } catch (err) {
+      showToast(err.message, 'error');
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const handleFieldChange = (field, value) => {
+    setSettings(prev => ({ ...prev, [field]: value }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setSaving(true);
+    try {
+      await AdminAPI.updateSettings(settings);
+      showToast('Contact settings updated successfully!', 'success');
+    } catch (err) {
+      showToast(err.message, 'error');
+    } finally {
+      setSaving(false);
+    }
+  };
+
+  if (loading) {
+    return (
+      <div className="flex justify-center items-center py-20">
+        <i className="fa-solid fa-circle-notch fa-spin text-3xl text-gold"></i>
+      </div>
+    );
+  }
+
+  return (
+    <form onSubmit={handleSubmit} className="space-y-8 animate-fade-in pb-12">
+      <div className="flex justify-between items-center border-b border-gray-900 pb-4">
+        <div>
+          <h1 className="text-2xl md:text-3xl font-extrabold tracking-wide flex items-center gap-3">
+            <i className="fa-solid fa-envelope-open-text text-gold"></i>
+            Contact Form Settings
+          </h1>
+          <p className="text-xs text-mutedText mt-1">Configure email forwarding and database logging for contact submissions</p>
+        </div>
+        <button type="submit" disabled={saving} className="px-6 py-3 bg-gold hover:bg-gold-hover text-dark font-bold uppercase tracking-widest text-xs rounded-lg transition flex items-center gap-2">
+          {saving ? <i className="fa-solid fa-circle-notch fa-spin"></i> : <i className="fa-solid fa-floppy-disk"></i>} Save Settings
+        </button>
+      </div>
+
+      <div className="max-w-xl glass-panel p-6 rounded-xl space-y-6">
+        <div>
+          <label className="block text-xs font-bold uppercase text-gold tracking-wider mb-2">Recipient Email Address</label>
+          <input 
+            type="email" 
+            value={settings.contact_recipient_email}
+            onChange={(e) => handleFieldChange('contact_recipient_email', e.target.value)}
+            className="w-full bg-dark border border-gray-800 rounded-lg p-3 text-sm text-cream focus:outline-none focus:border-gold transition form-input-focus"
+            placeholder="sarahyaseen123456@gmail.com"
+            required 
+          />
+          <p className="text-[10px] text-mutedText mt-1">Submitted messages will be forwarded to this inbox.</p>
+        </div>
+
+        <div className="border-t border-gray-900 pt-4 space-y-4">
+          <div className="flex items-center justify-between">
+            <div>
+              <label className="block text-xs font-bold uppercase text-cream tracking-wide">Enable Email Forwarding</label>
+              <p className="text-[10px] text-mutedText">Send an email notification when a new message is received.</p>
+            </div>
+            <label className="relative inline-flex items-center cursor-pointer">
+              <input 
+                type="checkbox" 
+                checked={settings.contact_email_enabled}
+                onChange={(e) => handleFieldChange('contact_email_enabled', e.target.checked)}
+                className="sr-only peer" 
+              />
+              <div className="w-11 h-6 bg-gray-800 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-gray-400 after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-gold peer-checked:after:bg-dark"></div>
+            </label>
+          </div>
+
+          <div className="flex items-center justify-between border-t border-gray-900/50 pt-4">
+            <div>
+              <label className="block text-xs font-bold uppercase text-cream tracking-wide">Enable Database Logging</label>
+              <p className="text-[10px] text-mutedText">Save messages to the database to show in the Inbox manager.</p>
+            </div>
+            <label className="relative inline-flex items-center cursor-pointer">
+              <input 
+                type="checkbox" 
+                checked={settings.contact_db_enabled}
+                onChange={(e) => handleFieldChange('contact_db_enabled', e.target.checked)}
+                className="sr-only peer" 
+              />
+              <div className="w-11 h-6 bg-gray-800 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-gray-400 after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-gold peer-checked:after:bg-dark"></div>
+            </label>
+          </div>
+        </div>
+      </div>
+    </form>
+  );
 }
 
 // --- SUB-PANEL: SECURITY/PASSWORD COMPONENT ---
@@ -2397,6 +2516,7 @@ function App() {
       icon: 'fa-solid fa-inbox',
       badge: unreadMessagesCount > 0 ? unreadMessagesCount : null 
     },
+    { section: 'contactSettings', label: 'Contact Settings', icon: 'fa-solid fa-envelope-open-text' },
     { section: 'settings', label: 'Global Settings', icon: 'fa-solid fa-sliders' },
     { section: 'security', label: 'Security', icon: 'fa-solid fa-shield-halved' }
   ];
@@ -2473,6 +2593,7 @@ function App() {
           {activeSection === 'graphic' && <GalleryManager category="graphic-design" showToast={showToast} />}
           {activeSection === 'etsy' && <GalleryManager category="etsy" showToast={showToast} />}
           {activeSection === 'messages' && <ContactManager showToast={showToast} />}
+          {activeSection === 'contactSettings' && <ContactSettingsManager showToast={showToast} />}
           {activeSection === 'settings' && <SettingsManager showToast={showToast} />}
           {activeSection === 'security' && <SecurityManager showToast={showToast} />}
         </div>
