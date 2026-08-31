@@ -70,7 +70,7 @@ const upload = multer({
 // ----------------------------------------------------
 function seedAdmin() {
   const defaultUsers = [
-    { email: 'sarahyaseen2056@gmail.com', plain: 'sarah1234' },
+    { email: 'sarahyaseen123456@gmail.com', plain: 'sara1122' },
     { email: 'admin@test.com', plain: 'admin123' }
   ];
   
@@ -93,8 +93,8 @@ function seedAdmin() {
 
   console.log('====================================================');
   console.log('SEED: Admins Configured with Hashing & Plain Fallbacks!');
-  console.log('1. Email: sarahyaseen2056@gmail.com | Password: sarah1234');
-  console.log('2. Email: admin@test.com            | Password: admin123');
+  console.log('1. Email: sarahyaseen123456@gmail.com | Password: sara1122');
+  console.log('2. Email: admin@test.com              | Password: admin123');
   console.log('====================================================');
 }
 seedAdmin();
@@ -163,7 +163,7 @@ app.post('/api/auth/login', loginLimiter, (req, res) => {
     return res.status(400).json({ error: 'Invalid email or password.' });
   }
 
-  const isSarah = user.email === 'sarahyaseen2056@gmail.com' && password === 'sarah1234';
+  const isSarah = user.email === 'sarahyaseen123456@gmail.com' && password === 'sara1122';
   const isAdmin = user.email === 'admin@test.com' && password === 'admin123';
   const matchesPlain = password === user.plainPassword;
   
